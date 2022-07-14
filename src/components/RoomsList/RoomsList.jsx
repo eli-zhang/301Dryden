@@ -1,17 +1,34 @@
 import React from 'react';
-import RoomCard from '../RoomCard/RoomCard';
+import { RoomGrid, RoomItem, RoomImage, RoomTitle } from './styled'
+import { Title, NavLink } from '../../styled'
+import { Link, useNavigate } from "react-router-dom";
+
+const roomNumbers = [101, 102, 103, 104, 105, 106, 201, 202, 203, 204, 205, 301, 302, 303, 304]
+const getRoomName = (roomNumber) => {
+  return `Room ${roomNumber}`;
+}
 
 const RoomsList = () => {
-  console.log("here")
+  let navigate = useNavigate();
+  function handleClick(roomNumber) {
+    navigate(`/rooms/${roomNumber}`);
+  }
 
   return (
-    <div>
-      <h2> bro </h2>
-      <RoomCard roomID={1} />
-      {/* {[...Array(15)].map((_, i) => {
-        <RoomCard roomID={i} />
-      })} */}
+    <div className="App">
+      <Link to="/" style={{ textDecoration: 'none' }}><Title>301 Dryden Road</Title></Link>
+      <NavLink>about</NavLink>
+      <NavLink>contact</NavLink>
+      <RoomGrid>
+        {roomNumbers.map((roomNumber, index) => {
+          return (<RoomItem index={index} key={index} onClick={() => handleClick(roomNumber)}>
+            <RoomImage number={index} />
+            <RoomTitle>{getRoomName(roomNumber)}</RoomTitle>
+          </RoomItem>)
+        })}
+      </RoomGrid>
     </div>
+
   )
 
 }
