@@ -4,7 +4,6 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
-import HomeView from './components/HomeView/HomeView';
 import RoomView from './components/RoomView/RoomView';
 import RoomsList from './components/RoomsList/RoomsList';
 
@@ -18,13 +17,13 @@ root.render(
 
     <Routes>
       <Route path="/">
-        <Route index={true} element={<HomeView />} />
+        <Route index={true} element={<App />} />
       </Route>
       <Route path="/rooms" >
         <Route index={true} element={<RoomsList />} />
         <Route index={false} path=":id" element={<RoomView />} />
       </Route>
-      <Route path="*" element={<HomeView />} />
+      <Route path="*" element={<App />} />
     </Routes>
   </BrowserRouter >
 
