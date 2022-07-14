@@ -41,7 +41,7 @@ export const RoomGrid = styled.div`
     grid-template-rows: auto;
     height: 1500px;
     place-items: stretch;
-    background: #F1F1F6;
+    background: none;
 `
 
 export const RoomItem = styled.div`
@@ -51,6 +51,7 @@ export const RoomItem = styled.div`
     grid-column-end: span 1;
     grid-row-end: span 1;
     text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 `
 
 export const RoomImage = styled.div`
