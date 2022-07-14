@@ -30,7 +30,9 @@ function getImageByKey(key) {
 
 export const Title = styled.h1`
     color: #222222;
-    font-size: 40px;
+    font-size: 50px;
+    font-family: 'Cardo', serif;
+    font-weight: 400;
 `
 
 export const RoomGrid = styled.div`
@@ -39,7 +41,7 @@ export const RoomGrid = styled.div`
     column-gap: 20px;
     row-gap: 20px;
     grid-template-rows: auto;
-    height: 1500px;
+    height: 1300px;
     place-items: stretch;
     background: none;
 `
@@ -65,5 +67,7 @@ export const RoomImage = styled.div`
 
 export const RoomTitle = styled.p`
     color: black;
-    font-weight: bold;
+    font-weight: 600;
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
 `
