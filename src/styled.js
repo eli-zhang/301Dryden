@@ -41,7 +41,7 @@ export const RoomGrid = styled.div`
     column-gap: 20px;
     row-gap: 20px;
     grid-template-rows: auto;
-    height: 1300px;
+    height: 1100px;
     place-items: stretch;
     background: none;
 `
@@ -54,6 +54,12 @@ export const RoomItem = styled.div`
     grid-row-end: span 1;
     text-align: center;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+    transition: all .1s ease-in-out;
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.02);
+    }
 `
 
 export const RoomImage = styled.div`
@@ -68,6 +74,6 @@ export const RoomImage = styled.div`
 export const RoomTitle = styled.p`
     color: black;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 14px;
     font-family: 'Open Sans', sans-serif;
 `
