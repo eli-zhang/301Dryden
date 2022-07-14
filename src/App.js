@@ -1,23 +1,24 @@
 import logo from './logo.svg';
-import './App.css';
-import { Routes, Route, useNavigate } from 'react-router-dom';
-import RoomCard from './components/RoomCard/RoomCard';
-import HomeView from './components/HomeView/HomeView';
-import RoomView from './components/RoomView/RoomView';
-import RoomsList from './components/RoomsList/RoomsList';
-import { BrowserRouter } from "react-router-dom";
+import { Title, RoomGrid, RoomItem, RoomImage, RoomTitle } from './styled'
 
-
+const roomNumbers = [101, 102, 103, 104, 105, 106, 201, 202, 203, 204, 205, 301, 302, 303, 304]
+const getRoomName = (roomNumber) => {
+  return `Room ${roomNumber}`;
+}
 
 function App() {
-  // const navigate = useNavigate();
-
-  // const navigateToRooms = () => {
-  //   navigate('/rooms');
-  // };
 
   return (
-    <div>
+    <div className="App">
+      <Title>301 Dryden Road</Title>
+      <RoomGrid>
+        {roomNumbers.map((roomNumber, index) => {
+          return (<RoomItem index={index} key={index}>
+            <RoomImage number={index} />
+            <RoomTitle>{getRoomName(roomNumber)}</RoomTitle>
+          </RoomItem>)
+        })}
+      </RoomGrid>
     </div>
 
   );
