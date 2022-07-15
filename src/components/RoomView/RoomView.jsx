@@ -1,15 +1,27 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import PhotoCarousel from './PhotoCarousel';
+import { Title } from '../../styled';
+import { PreviewImage, Container, Description, Text } from './styled';
 
 const RoomView = () => {
-    let params = useParams();
+    const params = useParams();
+    const preview = require(`../../images/room${params.id}/room${params.id}-1.jpg`);
 
-    console.log("here2")
     return (
-        <div>
-            <h1> {params.id} </h1>
-            <h2> suppp </h2>
-        </div>
+        <Container>
+
+            <Title> Room {params.id} </Title>
+            <div style={{ margin: '10px' }}>
+                {/* <PreviewImage src={preview} /> */}
+                <PhotoCarousel roomId={params.id} />
+                <Description>
+                    <Text> Available </Text>
+                    <Text> Price: $1000/month </Text>
+                    <Text> 150 sq.ft </Text>
+                </Description >
+            </div>
+        </Container >
     );
 }
 

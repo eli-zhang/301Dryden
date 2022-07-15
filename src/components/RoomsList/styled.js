@@ -56,7 +56,6 @@ export const RoomItem = styled.div`
 `
 
 export const RoomImage = styled.div`
-${props => console.log(props.number, `room${props.number + 1}`)}
     width: 100%;
     height: 80%;
     background-image: url(${props => getImageByKey(`room${props.number + 1}`)});
