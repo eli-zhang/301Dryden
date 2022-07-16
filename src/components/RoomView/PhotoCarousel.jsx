@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import { CarouselImage } from './styled';
-import 'bootstrap/dist/css/bootstrap.css';
+// import 'bootstrap/dist/css/bootstrap.css';
 
 const PhotoCarousel = ({ roomId }) => {
   const [index, setIndex] = useState(0);
