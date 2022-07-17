@@ -1,6 +1,19 @@
 import styled from 'styled-components';
-
+import logo from './images/logo.png'
 import homeImage from './images/home.png';
+
+const accentColor = "#f2843f"
+
+export const Logo = styled.div`
+    margin-top: -20px;
+    margin-bottom: -20px;
+    width: 140px;
+    height: 140px;
+    background-image: url(${logo});
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position: center bottom;
+`
 
 export const Title = styled.h1`
     color: #333333;
@@ -57,17 +70,15 @@ export const NavItem = styled.li`
         width: 100%;
         height: 2px;
         z-index: 0;
-        background-color: #FFA754;
-        transform: scaleX(0);
+        background-color: ${accentColor};
+        transform: scaleX(${props => props.active ? 1 : 0});
         transform-origin: left;
         transition: transform 0.2s ease-out, opacity 0.2s ease-out 0.3s;
     }
-
-
 `
 
 export const ContactButton = styled.button`
-    background-color: #FFA754;
+    background-color: ${accentColor};
     color: white;
     margin-right: 15px;
 
@@ -121,20 +132,29 @@ export const TaglineContainer = styled.div`
 `
 
 export const TaglineText = styled.span`
-    color: #FFA754;
+    color: ${accentColor};
     font-size: 1.7rem;
     text-transform: uppercase;
 `
 
 export const SectionTitle = styled.h1`
     margin-top: 70px;
-    color: #FFA754;
+    color: ${accentColor};
     font-size: 1.9rem;
     text-align: center;
     font-weight: 700;
     text-transform: uppercase;
 `
 
+export const SectionDescription = styled.h1`
+    margin-top: 20px;
+    color: #333333;
+    font-size: 1rem;
+    text-align: center;
+    font-family: 'Cardo', serif;
+    font-weight: 400;
+`
+
 export const RoomsListContainer = styled.div`
-    margin: 60px 80px;
+    margin: 40px 80px;
 `
