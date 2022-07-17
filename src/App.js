@@ -1,6 +1,10 @@
 
-import { Title, NavBar, NavItem, NavItemsContainer } from './styled';
+import { Title, NavBar, NavItem, NavItemsContainer, 
+  BackgroundHeaderContainer, ContactButton, BackgroundSquare, LargeHomeImage,
+  TaglineContainer, TaglineText,
+  SectionTitle, RoomsListContainer } from './styled';
 import { Link } from "react-router-dom";
+import RoomsList from './components/RoomsList/RoomsList'
 
 function App() {
 
@@ -9,16 +13,29 @@ function App() {
       <NavBar>
         <Link to="/" style={{ textDecoration: 'none' }}><Title>301 Dryden Road</Title></Link>
         <NavItemsContainer>
-          <NavItem>Home</NavItem>
+          <Link to="/" style={{ textDecoration: 'none' }}><NavItem>Home</NavItem></Link>
           <NavItem>Location</NavItem>
+          <NavItem>Rooms</NavItem>
           <NavItem>About</NavItem>
-          <NavItem>Contact Us</NavItem>
         </NavItemsContainer>
-        <NavItemsContainer>
-          <NavItem>Hi</NavItem>
-
-        </NavItemsContainer>
+        <ContactButton>Contact Us</ContactButton>
       </NavBar>
+
+      <BackgroundHeaderContainer>
+        <BackgroundSquare />
+        <LargeHomeImage />
+        <TaglineContainer>
+          <TaglineText>Home — two minutes from campus. </TaglineText>
+        </TaglineContainer>
+      </BackgroundHeaderContainer>
+
+      <SectionTitle>
+        Explore our rooms
+      </SectionTitle>
+
+      <RoomsListContainer>
+        <RoomsList></RoomsList>
+      </RoomsListContainer>
       
     </div>
 

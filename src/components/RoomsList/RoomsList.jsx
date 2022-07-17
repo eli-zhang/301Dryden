@@ -16,7 +16,6 @@ const RoomsList = () => {
 
   return (
     <div className="App">
-      <Link to="/" style={{ textDecoration: 'none' }}><Title>301 Dryden Road</Title></Link>
       <RoomGrid>
         {roomNumbers.map((roomNumber, index) => {
           return (<RoomItem index={index} key={index} onClick={() => handleClick(roomNumber)}>

@@ -66,7 +66,9 @@ export const RoomImage = styled.div`
 
 export const RoomTitle = styled.p`
     color: black;
+    margin-top: 15px;
     font-weight: 600;
     font-size: 14px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+    text-transform: uppercase;
 `
