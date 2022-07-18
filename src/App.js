@@ -1,6 +1,6 @@
 
 import { Logo, Title, NavBar, NavItem, NavItemsContainer, 
-  BackgroundHeaderContainer, ContactButton, BackgroundSquare, LargeHomeImage,
+  BackgroundHeaderContainer, FilledButton, EmptyButton, EmptyButtonContainer, BackgroundSquare, LargeHomeImage,
   TaglineContainer, TaglineText,
   SectionTitle, SectionDescription, 
   RoomsListContainer } from './styled';
@@ -19,7 +19,7 @@ function App() {
           <Link to="/rooms" style={{ textDecoration: 'none' }}><NavItem>Rooms</NavItem></Link>
           <Link to="/about" style={{ textDecoration: 'none' }}><NavItem>About</NavItem></Link>
         </NavItemsContainer>
-        <ContactButton>Contact Us</ContactButton>
+        <FilledButton>Contact Us</FilledButton>
       </NavBar>
 
       <BackgroundHeaderContainer>
@@ -28,6 +28,9 @@ function App() {
         <TaglineContainer>
           <TaglineText>Home — two minutes from campus. </TaglineText>
         </TaglineContainer>
+        <EmptyButtonContainer>
+          <EmptyButton>Explore Rooms</EmptyButton>
+        </EmptyButtonContainer>
       </BackgroundHeaderContainer>
 
       <SectionTitle>

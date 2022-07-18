@@ -62,6 +62,7 @@ export const RoomImage = styled.div`
     background-repeat:no-repeat;
     background-size:cover;
     background-position: center bottom;
+    filter: contrast(70%) saturate(140%);
 `
 
 export const RoomTitle = styled.p`

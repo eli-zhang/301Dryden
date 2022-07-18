@@ -77,7 +77,7 @@ export const NavItem = styled.li`
     }
 `
 
-export const ContactButton = styled.button`
+export const FilledButton = styled.button`
     background-color: ${accentColor};
     color: white;
     margin-right: 15px;
@@ -88,11 +88,35 @@ export const ContactButton = styled.button`
     font-family: 'Ubuntu', sans-serif;
     font-weight: 300;
     text-transform: uppercase;
+    /* box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.05); */
+
+    &:hover {
+        cursor: pointer;
+    }
+`
+
+export const EmptyButton = styled.button`
+    background-color: rgba(0, 0, 0, 0);
+    color: ${accentColor};
+
+    border: 1px solid ${accentColor};
+    padding: 15px 20px;
+    font-size: 1rem;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.05);
 
     &:hover {
         cursor: pointer;
     }
+`
+
+export const EmptyButtonContainer = styled.div`
+    position: absolute;
+    display: inline-block;
+    top: 60%;
+    left: 70px;
 `
 
 export const BackgroundHeaderContainer = styled.div`
@@ -113,8 +137,8 @@ export const LargeHomeImage = styled.div`
     position: absolute;
     margin-top: 50px;
     top: 0;
-    right: 7%;
-    width: 1000px;
+    left: 325px;
+    width: 70%;
     height: 600px;
     background-image: url(${homeImage});
     background-repeat:no-repeat;
@@ -126,14 +150,16 @@ export const TaglineContainer = styled.div`
     position: absolute;
     background-color: rgba(255, 255, 255, 0.95);
     display: inline-block;
-    top: 45%;
-    left: 5%;
+    top: 47%;
+    left: 70px;
     padding: 20px;
 `
 
 export const TaglineText = styled.span`
     color: ${accentColor};
     font-size: 1.7rem;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
     text-transform: uppercase;
 `
 
