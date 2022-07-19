@@ -1,27 +1,27 @@
 import styled from 'styled-components';
-import room1 from '../../images/room1.jpg'
-import room2 from '../../images/room2.jpg';
-import room3 from '../../images/room3.jpg';
-import room4 from '../../images/room4.jpg';
-import room5 from '../../images/room5.jpg';
-import room6 from '../../images/room6.jpg';
-import room7 from '../../images/room7.jpg';
-import room8 from '../../images/room8.jpg';
-import room9 from '../../images/room9.jpg';
-import room10 from '../../images/room10.jpg';
-import room11 from '../../images/room11.jpg';
-import room12 from '../../images/room12.jpg';
-import room13 from '../../images/room13.jpg';
-import room14 from '../../images/room14.jpg';
-import room15 from '../../images/room15.jpg';
+import room101 from '../../images/room101.jpg'
+import room102 from '../../images/room102.jpg';
+import room103 from '../../images/room103.jpg';
+import room104 from '../../images/room104.jpg';
+import room105 from '../../images/room105.jpg';
+import room106 from '../../images/room106.jpg';
+import room201 from '../../images/room201.jpg';
+import room202 from '../../images/room202.jpg';
+import room203 from '../../images/room203.jpg';
+import room204 from '../../images/room204.jpg';
+import room205 from '../../images/room205.jpg';
+import room301 from '../../images/room301.jpg';
+import room302 from '../../images/room302.jpg';
+import room303 from '../../images/room303.jpg';
+import room304 from '../../images/room304.jpg';
 
 const ROWS_IN_GRID = 4;
 const COLS_IN_GRID = 4;
 
 const images = {
-  room1, room2, room3, room4, room5,
-  room6, room7, room8, room9, room10,
-  room11, room12, room13, room14, room15,
+  room101, room102, room103, room104, room105,
+  room106, room201, room202, room203, room204,
+  room205, room301, room302, room303, room304,
 };
 
 function getImageByKey(key) {
@@ -58,7 +58,7 @@ export const RoomItem = styled.div`
 export const RoomImage = styled.div`
     width: 100%;
     height: 80%;
-    background-image: url(${props => getImageByKey(`room${props.number + 1}`)});
+    background-image: url(${props => getImageByKey(`room${props.number}`)});
     background-repeat:no-repeat;
     background-size:cover;
     background-position: center bottom;

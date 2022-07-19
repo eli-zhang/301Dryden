@@ -19,7 +19,7 @@ const RoomsList = () => {
       <RoomGrid>
         {roomNumbers.map((roomNumber, index) => {
           return (<RoomItem index={index} key={index} onClick={() => handleClick(roomNumber)}>
-            <RoomImage number={index} />
+            <RoomImage number={roomNumber} />
             <RoomTitle>{getRoomName(roomNumber)}</RoomTitle>
           </RoomItem>)
         })}

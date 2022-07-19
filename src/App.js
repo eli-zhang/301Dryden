@@ -29,7 +29,7 @@ function App() {
           <TaglineText>Home — two minutes from campus. </TaglineText>
         </TaglineContainer>
         <EmptyButtonContainer>
-          <EmptyButton>Explore Rooms</EmptyButton>
+        <Link to="/rooms" style={{ textDecoration: 'none' }}><EmptyButton>Explore Rooms</EmptyButton></Link>
         </EmptyButtonContainer>
       </BackgroundHeaderContainer>
 

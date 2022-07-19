@@ -152,13 +152,13 @@ export const TaglineContainer = styled.div`
     display: inline-block;
     top: 47%;
     left: 70px;
-    padding: 20px;
+    padding: 15px;
 `
 
 export const TaglineText = styled.span`
     color: ${accentColor};
-    font-size: 1.7rem;
-    font-family: 'Ubuntu', sans-serif;
+    font-size: 2.5rem;
+    font-family: 'Bebas Neue', cursive;
     font-weight: 400;
     text-transform: uppercase;
 `
