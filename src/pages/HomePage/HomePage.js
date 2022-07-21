@@ -1,26 +1,18 @@
 
-import { Logo, Title, NavBar, NavItem, NavItemsContainer, 
-  BackgroundHeaderContainer, FilledButton, EmptyButton, EmptyButtonContainer, BackgroundSquare, LargeHomeImage,
+import { 
+  BackgroundHeaderContainer, EmptyButton, EmptyButtonContainer, BackgroundSquare, LargeHomeImage,
   TaglineContainer, TaglineText,
   SectionTitle, SectionDescription, 
+  MapContainer, Map,
   RoomsListContainer } from './styled';
 import { Link } from "react-router-dom";
-import RoomsList from './components/RoomsList/RoomsList'
+import RoomsList from '../../components/RoomsList/RoomsList'
+import NavBar from '../../components/NavBar/NavBar'
 
-function App() {
+function HomePage() {
   return (
     <div className="App">
-      <NavBar>
-        <Logo />
-        {/* <Link to="/" style={{ textDecoration: 'none' }}><Title>301 Dryden Road</Title></Link> */}
-        <NavItemsContainer>
-          <Link to="/" style={{ textDecoration: 'none' }}><NavItem active>Home</NavItem></Link>
-          <Link to="/location" style={{ textDecoration: 'none' }}><NavItem>Location</NavItem></Link>
-          <Link to="/rooms" style={{ textDecoration: 'none' }}><NavItem>Rooms</NavItem></Link>
-          <Link to="/about" style={{ textDecoration: 'none' }}><NavItem>About</NavItem></Link>
-        </NavItemsContainer>
-        <FilledButton>Contact Us</FilledButton>
-      </NavBar>
+      <NavBar tab={"Home"}/>
 
       <BackgroundHeaderContainer>
         <BackgroundSquare />
@@ -32,6 +24,17 @@ function App() {
         <Link to="/rooms" style={{ textDecoration: 'none' }}><EmptyButton>Explore Rooms</EmptyButton></Link>
         </EmptyButtonContainer>
       </BackgroundHeaderContainer>
+
+      <SectionTitle>
+        About our home
+      </SectionTitle>
+      <SectionDescription>
+        Fully furnished, all utilities paid for, and close to everything in collegetown.
+      </SectionDescription>
+
+      <MapContainer>
+        <Map></Map>
+      </MapContainer>
 
       <SectionTitle>
         Explore our rooms
@@ -49,4 +52,4 @@ function App() {
   );
 }
 
-export default App;
+export default HomePage;

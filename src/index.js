@@ -1,12 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
-import RoomView from './components/RoomView/RoomView';
-import RoomsList from './components/RoomsList/RoomsList';
-
+import HomePage from './pages/HomePage/HomePage';
+import RoomPage from './pages/RoomPage/RoomPage';
+import RoomListPage from './pages/RoomListPage/RoomListPage';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root')
@@ -17,13 +16,13 @@ root.render(
 
     <Routes>
       <Route path="/">
-        <Route index={true} element={<App />} />
+        <Route index={true} element={<HomePage />} />
       </Route>
       <Route path="/rooms" >
-        <Route index={true} element={<RoomsList />} />
-        <Route index={false} path=":id" element={<RoomView />} />
+        <Route index={true} element={<RoomListPage />} />
+        <Route index={false} path=":id" element={<RoomPage />} />
       </Route>
-      <Route path="*" element={<App />} />
+      <Route path="*" element={<HomePage />} />
     </Routes>
   </BrowserRouter >
 
