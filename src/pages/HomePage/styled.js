@@ -148,8 +148,8 @@ export const Map = styled.div`
     margin-top: 50px;
     top: 0;
     left: 70px;
-    width: 40%;
-    height: 400px;
+    width: 50%;
+    height: 500px;
     background-image: url(${map});
     background-repeat:no-repeat;
     background-size:cover;
