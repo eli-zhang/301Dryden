@@ -32,7 +32,7 @@ export const EmptyButtonContainer = styled.div`
 `
 
 export const BackgroundHeaderContainer = styled.div`
-    margin-top: 110px;
+    // margin-top: 110px;
     position: relative;
     height: 700px;
 `

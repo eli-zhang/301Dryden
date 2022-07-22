@@ -1,9 +1,34 @@
 import React, { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-import { CarouselImage } from './styled';
+import { CarouselImage, Container } from './styled';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 // import 'bootstrap/dist/css/bootstrap.css';
 
+// document.getElementsByClassName("slick-next:before").style.color = "black";
+
+// let elements = document.getElementsByClassName("slick-arrow");
+// console.log(elements)
+// for (let item of elements) {
+//   console.log(item);
+//   item.style.color = "black"
+// }
+// const a = document.getElementsByClassName("slick-prev:before");
+// a[0].style.color = "black";
+
 const PhotoCarousel = ({ roomId }) => {
+  const settings = {
+    arrows: true,
+    dots: true,
+    infinite: true,
+    adaptiveHeight: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    focusOnSelect: true
+  };
   const [index, setIndex] = useState(0);
 
   const handleSelect = (selectedIndex, e) => {
@@ -68,19 +93,31 @@ const PhotoCarousel = ({ roomId }) => {
   }
 
   return (
-    <Carousel activeIndex={index} onSelect={handleSelect} controls style={{ width: '50%', display: 'inline-block' }}>
-      {
-        content.map((_, i) => {
+
+    // <Carousel activeIndex={index} onSelect={handleSelect} controls style={{ width: '50%', display: 'inline-block' }}>
+    // {
+    <Container>
+      <Slider {...settings}>
+        {content.map((_, i) => {
           return (
-            <Carousel.Item style={{ backgroundColor: 'black' }} key={`item${i}`}>
+            <div>
               <CarouselImage
                 src={content[i]}
               />
-            </Carousel.Item>
+            </div>
+
+
+            // <Carousel.Item style={{ backgroundColor: 'black' }} key={`item${i}`}>
+            //   <CarouselImage
+            //     src={content[i]}
+            //   />
+            // </Carousel.Item>
           )
-        })
-      }
-    </Carousel>
+        })}
+      </Slider>
+    </Container>
+    // }
+    // </Carousel>
   );
 }
 

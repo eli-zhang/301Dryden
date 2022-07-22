@@ -2,11 +2,11 @@ import React from 'react';
 import PhotoCarousel from './PhotoCarousel';
 import { PreviewImage, Container, Description, Text } from './styled';
 
-const RoomView = ({id}) => {
+const RoomView = ({ id }) => {
     const preview = require(`../../images/room${id}/room${id}-1.jpg`);
-    
+
     return (
-        <Container>
+        <div>
 
             {/* <Title> Room {id} </Title> */}
             <div style={{ margin: '10px' }}>
@@ -18,7 +18,7 @@ const RoomView = ({id}) => {
                     <Text> 150 sq.ft </Text>
                 </Description >
             </div>
-        </Container >
+        </div >
     );
 }
 
