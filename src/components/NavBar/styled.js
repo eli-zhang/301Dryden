@@ -90,7 +90,7 @@ export const FilledButton = styled.button`
     font-family: 'Ubuntu', sans-serif;
     font-weight: 300;
     text-transform: uppercase;
-    /* box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.05); */
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15);
 
     &:hover {
         cursor: pointer;
