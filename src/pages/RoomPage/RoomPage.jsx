@@ -1,6 +1,7 @@
 
 import NavBar from '../../components/NavBar/NavBar'
 import RoomView from '../../components/RoomView/RoomView'
+import { RoomViewContainer } from './styled';
 import { useParams } from 'react-router-dom';
 
 const RoomPage = () => {
@@ -8,7 +9,9 @@ const RoomPage = () => {
 
     return <>
         <NavBar tab={"Rooms"}/>
-        <RoomView id={params.id}/>
+        <RoomViewContainer>
+            <RoomView id={params.id}/>
+        </RoomViewContainer>
     </>
 }
 
