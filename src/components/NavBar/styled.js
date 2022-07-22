@@ -21,7 +21,7 @@ export const Title = styled.h1`
 `
 
 export const NavBarContainer = styled.div`
-    position: fixed;
+    position: sticky;
     top: 0;
     width: 100%;
     z-index: 1;
