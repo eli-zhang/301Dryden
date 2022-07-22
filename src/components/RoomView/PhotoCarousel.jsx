@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-import { CarouselImage, Container } from './styled';
+import { CarouselImage, PhotoContainer } from './styled';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -27,7 +27,9 @@ const PhotoCarousel = ({ roomId }) => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    focusOnSelect: true
+    focusOnSelect: true,
+    autoplay: true,
+    autoplaySpeed: 2000,
   };
   const [index, setIndex] = useState(0);
 
@@ -38,7 +40,7 @@ const PhotoCarousel = ({ roomId }) => {
     return r.keys().map(r);
   }
 
-  var content
+  var content;
   switch (roomId) {
     case '100':
       content = importAll(require.context(`../../images/room100`, false, /\.(png|jpe?g|svg)$/));
@@ -88,15 +90,13 @@ const PhotoCarousel = ({ roomId }) => {
     case '304':
       content = importAll(require.context(`../../images/room304`, false, /\.(png|jpe?g|svg|mp4)$/));
       break;
-
-
   }
 
   return (
 
     // <Carousel activeIndex={index} onSelect={handleSelect} controls style={{ width: '50%', display: 'inline-block' }}>
     // {
-    <Container>
+    <PhotoContainer>
       <Slider {...settings}>
         {content.map((_, i) => {
           return (
@@ -115,7 +115,7 @@ const PhotoCarousel = ({ roomId }) => {
           )
         })}
       </Slider>
-    </Container>
+    </PhotoContainer>
     // }
     // </Carousel>
   );
