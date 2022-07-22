@@ -3,10 +3,8 @@ import PhotoCarousel from './PhotoCarousel';
 import { PreviewImage, Container, Description, Text } from './styled';
 
 const RoomView = ({id}) => {
-    console.log("id", id)
-
     const preview = require(`../../images/room${id}/room${id}-1.jpg`);
-
+    
     return (
         <Container>
 

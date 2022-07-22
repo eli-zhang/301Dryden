@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import homeImage from '../../images/home.png';
 import map from '../../images/map.png';
-import { accentColor } from '../../constants'
+import homeExterior from '../../images/home_exterior.jpg';
+import { accentColor } from '../../constants';
 
 export const EmptyButton = styled.button`
     background-color: rgba(0, 0, 0, 0);
@@ -15,8 +16,11 @@ export const EmptyButton = styled.button`
     text-transform: uppercase;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.05);
 
+    transition: background-color 0.5s ease;
+
     &:hover {
         cursor: pointer;
+        background-color: white;
     }
 `
 
@@ -28,6 +32,7 @@ export const EmptyButtonContainer = styled.div`
 `
 
 export const BackgroundHeaderContainer = styled.div`
+    margin-top: 110px;
     position: relative;
     height: 700px;
 `
@@ -68,14 +73,28 @@ export const TaglineContainer = styled.div`
 export const TaglineText = styled.span`
     color: ${accentColor};
     font-size: 2.5rem;
-    font-family: 'Bebas Neue', cursive;
+    font-family: 'Bebas Neue', sans-serif;
     font-weight: 400;
     text-transform: uppercase;
 `
 
-export const MapContainer = styled.div`
+export const AboutContainer = styled.div`
     position: relative;
     height: 500px;
+`
+
+export const AboutImage = styled.div`
+    position: absolute;
+    margin-top: 20px;
+    top: 0;
+    left: 70px;
+    width: 50%;
+    height: 500px;
+    background-image: url(${homeExterior});
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position: center bottom;
+    filter: contrast(70%) saturate(140%);
 `
 
 export const Map = styled.div`

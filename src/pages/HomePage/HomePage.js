@@ -3,7 +3,7 @@ import {
   BackgroundHeaderContainer, EmptyButton, EmptyButtonContainer, BackgroundSquare, LargeHomeImage,
   TaglineContainer, TaglineText,
   SectionTitle, SectionDescription, 
-  MapContainer, Map,
+  AboutContainer, AboutImage, Map,
   RoomsListContainer } from './styled';
 import { Link } from "react-router-dom";
 import RoomsList from '../../components/RoomsList/RoomsList'
@@ -28,13 +28,11 @@ function HomePage() {
       <SectionTitle>
         About our home
       </SectionTitle>
-      <SectionDescription>
-        Fully furnished, all utilities paid for, and close to everything in collegetown.
-      </SectionDescription>
 
-      <MapContainer>
-        <Map></Map>
-      </MapContainer>
+      <AboutContainer>
+        {/* <BackgroundSquare /> */}
+        <AboutImage />
+      </AboutContainer>
 
       <SectionTitle>
         Explore our rooms

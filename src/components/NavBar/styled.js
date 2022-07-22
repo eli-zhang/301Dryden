@@ -3,10 +3,9 @@ import logo from '../../images/logo.png'
 import { accentColor } from '../../constants'
 
 export const Logo = styled.div`
-    margin-top: -20px;
-    margin-bottom: -20px;
-    width: 140px;
-    height: 140px;
+    width: 80px;
+    height: 80px;
+    margin: 5px;
     background-image: url(${logo});
     background-repeat:no-repeat;
     background-size:cover;
@@ -22,8 +21,13 @@ export const Title = styled.h1`
 `
 
 export const NavBarContainer = styled.div`
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    box-sizing: border-box;
     background-color: #FFFFFF;
-    padding: 15px 20px;
+    padding: 10px 20px;
     box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.05);
     flex-basis: auto;
     display: flex;

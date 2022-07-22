@@ -22,8 +22,7 @@ const NavBar = ({ tab }) => {
             </Link>
         </NavItemsContainer>
         <FilledButton>Contact Us</FilledButton>
-    </NavBarContainer>
-            
+    </NavBarContainer>       
 }
 
 export default NavBar;
