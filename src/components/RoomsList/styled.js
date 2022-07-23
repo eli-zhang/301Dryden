@@ -38,7 +38,7 @@ export const RoomGrid = styled.div`
     column-gap: 20px;
     row-gap: 20px;
     grid-template-rows: auto;
-    height: 1700px;
+    height: 1800px;
     place-items: stretch;
     background: none;
 `
@@ -61,7 +61,7 @@ export const RoomItem = styled.div`
 
 export const RoomImage = styled.div`
     width: 100%;
-    height: 80%;
+    height: calc(100% - 50px);
     background-image: url(${props => getImageByKey(`room${props.number}`)});
     background-repeat:no-repeat;
     background-size:cover;
