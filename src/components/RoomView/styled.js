@@ -39,6 +39,10 @@ export const PhotoContainer = styled.div`
   left: 70px;
   width: 50%;
   height: 400px;
+  .slick-list { 
+    height: 100%;
+    transition: all 0.5s ease-in-out; 
+  }
 `
 
 export const RoomTextContainer = styled.div`
@@ -55,7 +59,7 @@ export const RoomTextContainer = styled.div`
 export const AboutTitle = styled.span`
   color: ${accentColor};
   font-size: 3.5rem;
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-weight: 400;
   text-transform: uppercase;
   margin: 0;
@@ -66,7 +70,7 @@ export const AboutPrice = styled.span`
   margin-left: 10px;
   color: ${accentColor};
   font-size: 1rem;
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-weight: 400;
 `
 
@@ -76,6 +80,32 @@ export const AboutDescription = styled.p`
   font-family: 'Cardo', serif;
   font-weight: 400;
   line-height: 1.6;
+`
+
+export const InterestButtonContainer = styled.div`
+  display: inline-block;
+  margin-top: 15px;
+  left: 70px;
+`
+
+export const EmptyButton = styled.button`
+    background-color: rgba(0, 0, 0, 0);
+    color: ${accentColor};
+
+    border: 1px solid ${accentColor};
+    padding: 15px 20px;
+    font-size: 1rem;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.05);
+
+    transition: background-color 0.5s ease;
+
+    &:hover {
+        cursor: pointer;
+        background-color: white;
+    }
 `
 
 export const PreviewImage = styled.img`
@@ -92,4 +122,5 @@ export const CarouselImage = styled.img`
   margin: auto;
   max-height: 500px;
   object-fit: cover;
+  filter: contrast(70%) saturate(140%);
 `

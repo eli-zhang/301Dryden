@@ -65,16 +65,16 @@ export const TaglineContainer = styled.div`
     display: inline-block;
     top: 47%;
     left: 70px;
-    padding: 15px;
+    padding: 10px 15px;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.05);
 
 `
 
 export const TaglineText = styled.span`
     color: ${accentColor};
-    font-size: 2.5rem;
-    font-family: 'Bebas Neue', sans-serif;
-    font-weight: 400;
+    font-size: 2.1rem;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
     text-transform: uppercase;
 `
 
@@ -115,15 +115,15 @@ export const AboutTextContainer = styled.div`
     left: calc(50% + 70px);
     margin-left: 50px;
     margin-right: 50px;
-    margin-top: 130px;
+    margin-top: 120px;
     /* padding: 20px 40px; */
     /* background-color: white; */
 `
 
 export const AboutTitle = styled.h1`
     color: ${accentColor};
-    font-size: 3.5rem;
-    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3.2rem;
+    font-family: 'Oswald', sans-serif;
     font-weight: 400;
     text-transform: uppercase;
     margin: 0;
@@ -157,16 +157,17 @@ export const Map = styled.div`
 `
 
 export const SectionTitle = styled.h1`
-    margin-top: 70px;
+    margin-top: 100px;
+    margin-bottom: 0px;
     color: ${accentColor};
-    font-size: 1.9rem;
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.4rem;
     text-align: center;
-    font-weight: 700;
+    font-weight: 400;
     text-transform: uppercase;
 `
 
 export const SectionDescription = styled.h1`
-    margin-top: 20px;
     color: #333333;
     font-size: 1rem;
     text-align: center;

@@ -28,10 +28,6 @@ function HomePage() {
         </ExploreRoomsButtonContainer>
       </BackgroundHeaderContainer>
 
-      {/* <SectionTitle>
-        About our home
-      </SectionTitle> */}
-
       <AboutContainer>
         <AboutBackgroundRect/>
         {viewingMap ? <Map /> : <AboutImage />}
