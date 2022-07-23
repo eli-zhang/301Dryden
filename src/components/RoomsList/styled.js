@@ -14,11 +14,15 @@ import room301 from '../../images/room301.jpg';
 import room302 from '../../images/room302.jpg';
 import room303 from '../../images/room303.jpg';
 import room304 from '../../images/room304.jpg';
+import room0 from '../../images/living_room.jpg';
+import room1 from '../../images/kitchen.jpg';
+import room2 from '../../images/bathroom.jpg';
 
-const ROWS_IN_GRID = 4;
+const ROWS_IN_GRID = 6;
 const COLS_IN_GRID = 4;
 
 const images = {
+  room0, room1, room2,
   room101, room102, room103, room104, room105,
   room106, room201, room202, room203, room204,
   room205, room301, room302, room303, room304,
@@ -34,17 +38,17 @@ export const RoomGrid = styled.div`
     column-gap: 20px;
     row-gap: 20px;
     grid-template-rows: auto;
-    height: 1100px;
+    height: 1700px;
     place-items: stretch;
     background: none;
 `
 
 export const RoomItem = styled.div`
-    grid-column-start: ${props => props.index % COLS_IN_GRID + 1};
-    grid-row-start: ${props => Math.floor(props.index / COLS_IN_GRID) + 1};
+    grid-column-start: ${props => (props.index + props.offset) % COLS_IN_GRID + 1};
+    grid-row-start: ${props => Math.floor((props.index + props.offset) / COLS_IN_GRID) + 1};
     background: white;
-    grid-column-end: span 1;
-    grid-row-end: span 1;
+    grid-column-end: span ${props => props.width};
+    grid-row-end: span ${props => props.height};
     text-align: center;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 
