@@ -5,6 +5,7 @@ import reportWebVitals from './reportWebVitals';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import HomePage from './pages/HomePage/HomePage';
 import RoomPage from './pages/RoomPage/RoomPage';
+import AboutPage from './pages/AboutPage/AboutPage';
 import RoomListPage from './pages/RoomListPage/RoomListPage';
 import ScrollToTop from './utils/ScrollToTop';
 
@@ -21,6 +22,9 @@ root.render(
       <Route path="/rooms" >
         <Route index={true} element={<RoomListPage />} />
         <Route index={false} path=":id" element={<RoomPage />} />
+      </Route>
+      <Route path="/about" >
+        <Route index={true} element={<AboutPage />} />
       </Route>
       <Route path="*" element={<HomePage />} />
     </Routes>

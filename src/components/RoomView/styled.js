@@ -122,5 +122,5 @@ export const CarouselImage = styled.img`
   margin: auto;
   max-height: 500px;
   object-fit: cover;
-  filter: contrast(70%) saturate(140%);
+  filter: contrast(80%) saturate(120%);
 `

@@ -1,37 +1,21 @@
 import styled from 'styled-components';
-import room101 from '../../images/room101.jpg'
-import room102 from '../../images/room102.jpg';
-import room103 from '../../images/room103.jpg';
-import room104 from '../../images/room104.jpg';
-import room105 from '../../images/room105.jpg';
-import room106 from '../../images/room106.jpg';
-import room201 from '../../images/room201.jpg';
-import room202 from '../../images/room202.jpg';
-import room203 from '../../images/room203.jpg';
-import room204 from '../../images/room204.jpg';
-import room205 from '../../images/room205.jpg';
-import room301 from '../../images/room301.jpg';
-import room302 from '../../images/room302.jpg';
-import room303 from '../../images/room303.jpg';
-import room304 from '../../images/room304.jpg';
-import room0 from '../../images/living_room.jpg';
-import room1 from '../../images/kitchen.jpg';
-import room2 from '../../images/bathroom.jpg';
 
 import { accentColor } from '../../constants';
 
 const ROWS_IN_GRID = 6;
 const COLS_IN_GRID = 4;
 
-const images = {
-  room0, room1, room2,
-  room101, room102, room103, room104, room105,
-  room106, room201, room202, room203, room204,
-  room205, room301, room302, room303, room304,
-};
-
 function getImageByKey(key) {
-  return images[key]
+    switch (key) {
+        case 0: 
+            return require(`../../images/livingroom/livingroom-cover.jpg`);
+        case 1:
+            return require(`../../images/kitchen/kitchen-cover.jpg`);
+        case 2:
+            return require(`../../images/bathroom/bathroom-cover.jpg`);
+        default: 
+            return require(`../../images/room${key}/room${key}-cover.jpg`);
+    }
 }
 
 export const RoomGrid = styled.div`
@@ -64,7 +48,7 @@ export const RoomItem = styled.div`
 export const RoomImage = styled.div`
     width: 100%;
     height: calc(100% - 50px);
-    background-image: url(${props => getImageByKey(`room${props.number}`)});
+    background-image: url(${props => getImageByKey(props.number)});
     background-repeat:no-repeat;
     background-size:cover;
     background-position: center bottom;
