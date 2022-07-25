@@ -3,6 +3,8 @@ import PhotoCarousel from './PhotoCarousel';
 import { Title, ImagesBackgroundRect, RoomTextContainer, 
     PreviewImage, HeaderContainer, Description, Text, InterestButtonContainer, EmptyButton,
     AboutTitle, AboutPrice, AboutDescription } from './styled';
+import { Link } from "react-router-dom";
+
 
 const floorNumberToAdjective = (number) => {
     const hundredsPlace = Math.floor(number / 100);
@@ -40,9 +42,11 @@ const RoomView = ({ id }) => {
                     
                 </AboutDescription >
                 <InterestButtonContainer>
-                    <EmptyButton>
-                        Request this room
-                    </EmptyButton>
+                    <Link to="/about" style={{ textDecoration: 'none' }}>
+                        <EmptyButton>
+                            Request this room
+                        </EmptyButton>
+                    </Link>
                 </InterestButtonContainer>
             </RoomTextContainer>
         </HeaderContainer>
