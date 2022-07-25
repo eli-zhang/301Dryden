@@ -17,6 +17,8 @@ function AboutPage() {
     <div className="App">
       <NavBar tab={"About"}/>
 
+      <iframe width="600" height="450" style="border:0" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ2Sa4wY2B0IkRvBhl9LZOMYI&key=AIzaSyATnhh1pmZjCHxOx4A9UwU6_9ovRBKYKz8"></iframe>
+
       <BackgroundHeaderContainer>
         <HeaderBackgroundRect />
         <LargeHomeImage />

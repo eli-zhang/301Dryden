@@ -8,13 +8,13 @@ const COLS_IN_GRID = 4;
 function getImageByKey(key) {
     switch (key) {
         case 0: 
-            return require(`../../images/livingroom/livingroom-cover.jpg`);
+            return require(`../../images/livingroom/livingroom-1.jpg`);
         case 1:
-            return require(`../../images/kitchen/kitchen-cover.jpg`);
+            return require(`../../images/kitchen/kitchen-1.jpg`);
         case 2:
-            return require(`../../images/bathroom/bathroom-cover.jpg`);
+            return require(`../../images/bathroom/bathroom-1.jpg`);
         default: 
-            return require(`../../images/room${key}/room${key}-cover.jpg`);
+            return require(`../../images/room${key}/room${key}-1.jpg`);
     }
 }
 
