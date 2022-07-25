@@ -5,7 +5,7 @@ import { Logo, Title, NavBarContainer, NavItem, NavItemsContainer, FilledButton 
 const NavBar = ({ tab }) => {
 
     return <NavBarContainer>
-        <Logo />
+        <Link to="/" style={{ textDecoration: 'none' }}><Logo /></Link>
         {/* <Link to="/" style={{ textDecoration: 'none' }}><Title>301 Dryden Road</Title></Link> */}
         <NavItemsContainer>
             <Link to="/" style={{ textDecoration: 'none' }}>

@@ -6,14 +6,14 @@ import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import HomePage from './pages/HomePage/HomePage';
 import RoomPage from './pages/RoomPage/RoomPage';
 import RoomListPage from './pages/RoomListPage/RoomListPage';
+import ScrollToTop from './utils/ScrollToTop';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root')
 );
 root.render(
   <BrowserRouter >
-    {/* <button onClick={navigateToRooms}>Rooms</button> */}
-
+    <ScrollToTop />
     <Routes>
       <Route path="/">
         <Route index={true} element={<HomePage />} />

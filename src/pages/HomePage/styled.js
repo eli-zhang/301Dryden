@@ -27,7 +27,7 @@ export const EmptyButton = styled.button`
 export const ExploreRoomsButtonContainer = styled.div`
     position: absolute;
     display: inline-block;
-    top: 60%;
+    top: 58%;
     left: 70px;
 `
 
@@ -72,7 +72,7 @@ export const TaglineContainer = styled.div`
 
 export const TaglineText = styled.span`
     color: ${accentColor};
-    font-size: 2.1rem;
+    font-size: 1.7rem;
     font-family: 'Oswald', sans-serif;
     font-weight: 500;
     text-transform: uppercase;

@@ -21,7 +21,7 @@ function HomePage() {
         <HeaderBackgroundRect />
         <LargeHomeImage />
         <TaglineContainer>
-          <TaglineText>Home — two minutes from campus. </TaglineText>
+          <TaglineText>Quiet, spacious, and 2 minutes from campus. </TaglineText>
         </TaglineContainer>
         <ExploreRoomsButtonContainer>
         <Link to="/rooms" style={{ textDecoration: 'none' }}><EmptyButton>Explore Rooms</EmptyButton></Link>
@@ -69,7 +69,7 @@ function HomePage() {
         Explore our rooms
       </SectionTitle>
       <SectionDescription>
-        <i>All rooms are fully furnished with a bed, desk, chair, lamp, and dresser.</i>
+        <i>All bedrooms are fully furnished with a bed, desk, chair, lamp, and dresser.</i>
       </SectionDescription>
 
       <RoomsListContainer>
