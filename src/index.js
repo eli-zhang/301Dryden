@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import { Routes, Route, HashRouter } from 'react-router-dom';
 import HomePage from './pages/HomePage/HomePage';
 import RoomPage from './pages/RoomPage/RoomPage';
 import AboutPage from './pages/AboutPage/AboutPage';
@@ -13,7 +13,7 @@ const root = ReactDOM.createRoot(
   document.getElementById('root')
 );
 root.render(
-  <BrowserRouter >
+  <HashRouter >
     <ScrollToTop />
     <Routes>
       <Route path="/">
@@ -28,7 +28,7 @@ root.render(
       </Route>
       <Route path="*" element={<HomePage />} />
     </Routes>
-  </BrowserRouter >
+  </HashRouter >
 
 );
 
