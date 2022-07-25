@@ -20,7 +20,7 @@ const NavBar = ({ tab }) => {
                 <NavItem active={tab === "Contact"}>Contact</NavItem>
             </Link> */}
         </NavItemsContainer>
-        <FilledButton>Contact Us</FilledButton>
+        <Link to="/about" style={{ textDecoration: 'none' }}><FilledButton>Contact Us</FilledButton></Link>
     </NavBarContainer>       
 }
 

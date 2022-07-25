@@ -1,162 +1,32 @@
 import styled from 'styled-components';
-import homeImage from '../../images/home.png';
-import map from '../../images/map.png';
-import homeExterior from '../../images/home_exterior.jpg';
 import { accentColor } from '../../constants';
 
-export const EmptyButton = styled.button`
-    background-color: rgba(0, 0, 0, 0);
-    color: ${accentColor};
-
-    border: 1px solid ${accentColor};
-    padding: 15px 20px;
-    font-size: 1rem;
-    font-family: 'Ubuntu', sans-serif;
-    font-weight: 400;
-    text-transform: uppercase;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.05);
-
-    transition: background-color 0.5s ease;
-
-    &:hover {
-        cursor: pointer;
-        background-color: white;
-    }
-`
-
-export const ExploreRoomsButtonContainer = styled.div`
+export const BackgroundContainer = styled.div`
+    background-color: white;
+    height: 150px;
     position: absolute;
     display: inline-block;
-    top: 58%;
-    left: 70px;
-`
-
-export const BackgroundHeaderContainer = styled.div`
-    /* // margin-top: 110px; */
-    position: relative;
-    height: 700px;
-`
-
-export const HeaderBackgroundRect = styled.div`
-    position: absolute;
-    top: 0;
-    background-color: #F3F3F3;
-    height: 700px;
-    display: block;
     width: 70%;
-`;
+    left: 50%;
+    margin-left: -37.5%;
+    margin-top: 200px;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
 
-export const LargeHomeImage = styled.div`
-    position: absolute;
-    margin-top: 50px;
-    top: 0;
-    left: 325px;
-    width: calc(95% - 325px);
-    height: 600px;
-    background-image: url(${homeImage});
-    background-repeat:no-repeat;
-    background-size:cover;
-    background-position: center bottom;
+
+    text-align: center;
+    vertical-align: middle;
+    line-height: 150px;
 `
 
-export const TaglineContainer = styled.div`
-    position: absolute;
-    background-color: rgba(255, 255, 255, 0.95);
-    display: inline-block;
-    top: 47%;
-    left: 70px;
-    padding: 10px 15px;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.05);
-
-`
-
-export const TaglineText = styled.span`
+export const HeaderText = styled.span`
     color: ${accentColor};
-    font-size: 1.7rem;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 500;
-    text-transform: uppercase;
-`
-
-export const AboutContainer = styled.div`
-    margin-top: 30px;
-    position: relative;
-    height: 600px;
-`
-
-export const AboutBackgroundRect = styled.div`
-    position: absolute;
-    top: 0;
-    background-color: #F3F3F3;
-    height: 600px;
-    display: block;
-    width: 70%;
-    right: 0;
-`;
-
-
-export const AboutImage = styled.div`
-    position: absolute;
-    margin-top: 50px;
-    top: 0;
-    left: 70px;
-    width: 50%;
-    height: 500px;
-    background-image: url(${homeExterior});
-    background-repeat:no-repeat;
-    background-size:cover;
-    background-position: center bottom;
-    filter: contrast(70%) saturate(140%);
-`
-
-export const AboutTextContainer = styled.div`
-    position: absolute;
-    top: 0;
-    left: calc(50% + 70px);
-    margin-left: 50px;
-    margin-right: 50px;
-    margin-top: 120px;
-    /* padding: 20px 40px; */
-    /* background-color: white; */
-`
-
-export const AboutTitle = styled.h1`
-    color: ${accentColor};
-    font-size: 3.2rem;
+    font-size: 2.6rem;
     font-family: 'Oswald', sans-serif;
     font-weight: 400;
     text-transform: uppercase;
     margin: 0;
 `
 
-export const AboutDescription = styled.p`
+export const BlackHeaderText = styled.span`
     color: #333333;
-    font-size: 1rem;
-    font-family: 'Cardo', serif;
-    font-weight: 400;
-    line-height: 1.6;
-`
-
-export const ViewMapButtonContainer = styled.div`
-    display: inline-block;
-    margin-top: 15px;
-    left: 70px;
-`
-
-export const Map = styled.div`
-    position: absolute;
-    margin-top: 50px;
-    top: 0;
-    left: 70px;
-    width: 50%;
-    height: 500px;
-    background-image: url(${map});
-    background-repeat:no-repeat;
-    background-size:cover;
-    background-position: center bottom;
-`
-
-export const SectionSpacer = styled.div`
-    width: 100%;
-    height: 60px;
 `
