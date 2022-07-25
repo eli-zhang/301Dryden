@@ -10,7 +10,7 @@ export const BackgroundContainer = styled.div`
     left: 50%;
     margin-left: -37.5%;
     margin-top: 200px;
-    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.35);
 
 
     text-align: center;
