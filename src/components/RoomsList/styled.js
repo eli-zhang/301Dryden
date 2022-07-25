@@ -18,6 +18,8 @@ import room0 from '../../images/living_room.jpg';
 import room1 from '../../images/kitchen.jpg';
 import room2 from '../../images/bathroom.jpg';
 
+import { accentColor } from '../../constants';
+
 const ROWS_IN_GRID = 6;
 const COLS_IN_GRID = 4;
 
@@ -76,4 +78,27 @@ export const RoomTitle = styled.p`
     font-size: 14px;
     font-family: 'Ubuntu', sans-serif;
     text-transform: uppercase;
+`
+
+export const RoomGridContainer = styled.div`
+    margin: 40px 80px;
+`
+
+export const SectionTitle = styled.h1`
+    margin-top: 30px;
+    margin-bottom: 0px;
+    color: ${accentColor};
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.4rem;
+    text-align: center;
+    font-weight: 400;
+    text-transform: uppercase;
+`
+
+export const SectionDescription = styled.h1`
+    color: #333333;
+    font-size: 1rem;
+    text-align: center;
+    font-family: 'Cardo', serif;
+    font-weight: 400;
 `

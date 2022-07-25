@@ -6,7 +6,6 @@ const NavBar = ({ tab }) => {
 
     return <NavBarContainer>
         <Link to="/" style={{ textDecoration: 'none' }}><Logo /></Link>
-        {/* <Link to="/" style={{ textDecoration: 'none' }}><Title>301 Dryden Road</Title></Link> */}
         <NavItemsContainer>
             <Link to="/" style={{ textDecoration: 'none' }}>
                 <NavItem active={tab === "Home"}>Home</NavItem>

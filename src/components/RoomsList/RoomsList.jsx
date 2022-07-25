@@ -1,5 +1,5 @@
 import React from 'react';
-import { RoomGrid, RoomItem, RoomImage, RoomTitle } from './styled'
+import { RoomGridContainer, RoomGrid, RoomItem, RoomImage, RoomTitle, SectionTitle, SectionDescription } from './styled'
 import { Link, useNavigate } from "react-router-dom";
 
 const roomNumbers = [101, 102, 103, 104, 105, 0, 1, 106, 201, 202, 203, 204, 205, 301, 302, 303, 2, 304]
@@ -53,20 +53,28 @@ const RoomsList = () => {
   }
 
   return (
-    <div className="App">
-      <RoomGrid>
-        {roomNumbers.map((roomNumber, index) => {
-          const { width, height, offset } = getInfoForRoomNumber(roomNumber, index);
-          return (
-          <RoomItem index={index} offset={offset} key={index} width={width} height={height}
-              onClick={() => handleClick(roomNumber)}>
-            <RoomImage number={roomNumber} />
-            <RoomTitle>{getRoomName(roomNumber)}</RoomTitle>
-          </RoomItem>)
-        })}
-      </RoomGrid>
-    </div>
-
+    <>
+      <SectionTitle>
+        Explore our rooms
+      </SectionTitle>
+      <SectionDescription>
+        <i>All bedrooms are fully furnished with a bed, desk, chair, lamp, and dresser.</i>
+      </SectionDescription>
+      <RoomGridContainer>
+        <RoomGrid>
+          {roomNumbers.map((roomNumber, index) => {
+            const { width, height, offset } = getInfoForRoomNumber(roomNumber, index);
+            return (
+            <RoomItem index={index} offset={offset} key={index} width={width} height={height}
+                onClick={() => handleClick(roomNumber)}>
+              <RoomImage number={roomNumber} />
+              <RoomTitle>{getRoomName(roomNumber)}</RoomTitle>
+            </RoomItem>)
+          })}
+        </RoomGrid>
+      </RoomGridContainer>
+    </>
+    
   )
 
 }

@@ -2,9 +2,9 @@
 import { 
   BackgroundHeaderContainer, EmptyButton, ExploreRoomsButtonContainer, HeaderBackgroundRect, LargeHomeImage,
   TaglineContainer, TaglineText,
-  SectionTitle, SectionDescription, 
   AboutTextContainer, AboutContainer, AboutBackgroundRect, AboutImage, AboutTitle, AboutDescription,
-  ViewMapButtonContainer, Map, RoomsListContainer } from './styled';
+  SectionSpacer,
+  ViewMapButtonContainer, Map } from './styled';
 import { Link } from "react-router-dom";
 import RoomsList from '../../components/RoomsList/RoomsList'
 import NavBar from '../../components/NavBar/NavBar'
@@ -27,6 +27,8 @@ function HomePage() {
         <Link to="/rooms" style={{ textDecoration: 'none' }}><EmptyButton>Explore Rooms</EmptyButton></Link>
         </ExploreRoomsButtonContainer>
       </BackgroundHeaderContainer>
+
+      <SectionSpacer/>
 
       <AboutContainer>
         <AboutBackgroundRect/>
@@ -65,16 +67,9 @@ function HomePage() {
         </AboutTextContainer>
       </AboutContainer>
 
-      <SectionTitle>
-        Explore our rooms
-      </SectionTitle>
-      <SectionDescription>
-        <i>All bedrooms are fully furnished with a bed, desk, chair, lamp, and dresser.</i>
-      </SectionDescription>
+      <SectionSpacer/>
 
-      <RoomsListContainer>
-        <RoomsList></RoomsList>
-      </RoomsListContainer>
+      <RoomsList />
       
     </div>
 

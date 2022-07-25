@@ -51,7 +51,7 @@ export const LargeHomeImage = styled.div`
     margin-top: 50px;
     top: 0;
     left: 325px;
-    width: 70%;
+    width: calc(95% - 325px);
     height: 600px;
     background-image: url(${homeImage});
     background-repeat:no-repeat;
@@ -61,7 +61,7 @@ export const LargeHomeImage = styled.div`
 
 export const TaglineContainer = styled.div`
     position: absolute;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: rgba(255, 255, 255, 0.95);
     display: inline-block;
     top: 47%;
     left: 70px;
@@ -79,7 +79,7 @@ export const TaglineText = styled.span`
 `
 
 export const AboutContainer = styled.div`
-    margin-top: 150px;
+    margin-top: 30px;
     position: relative;
     height: 600px;
 `
@@ -156,25 +156,7 @@ export const Map = styled.div`
     background-position: center bottom;
 `
 
-export const SectionTitle = styled.h1`
-    margin-top: 100px;
-    margin-bottom: 0px;
-    color: ${accentColor};
-    font-family: 'Oswald', sans-serif;
-    font-size: 2.4rem;
-    text-align: center;
-    font-weight: 400;
-    text-transform: uppercase;
-`
-
-export const SectionDescription = styled.h1`
-    color: #333333;
-    font-size: 1rem;
-    text-align: center;
-    font-family: 'Cardo', serif;
-    font-weight: 400;
-`
-
-export const RoomsListContainer = styled.div`
-    margin: 40px 80px;
+export const SectionSpacer = styled.div`
+    width: 100%;
+    height: 60px;
 `
