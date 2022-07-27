@@ -8,10 +8,10 @@ function ContactPage() {
     <>
       <NavBar tab={"Contact"} />
 
-      <ContactContainer>
-        <ContactBackgroundRect />
-        <ContactForm />
-      </ContactContainer>
+      {/* <ContactContainer>
+        <ContactBackgroundRect /> */}
+      <ContactForm />
+      {/* </ContactContainer> */}
     </>
   )
 

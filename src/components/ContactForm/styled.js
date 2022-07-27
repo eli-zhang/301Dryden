@@ -2,6 +2,22 @@
 import styled from 'styled-components';
 import { accentColor } from '../../constants';
 
+export const ContactContainer = styled.div`
+    margin-top: 30px;
+    position: relative;
+    height: 600px;
+`
+export const ContactBackgroundRect = styled.div`
+    position: absolute;
+    top: 10%;
+    background-color: #F3F3F3;
+    height: 700px;
+    display: block;
+    width: 70%;
+    right: 0;
+    z-index: -1;
+`;
+
 export const ContactTitle = styled.h1`
   color: ${accentColor};
   font-size: 4.2rem;
@@ -42,4 +58,29 @@ export const SubmitButton = styled.button`
       background-color: white;
   }
   margin: auto;
+`
+
+export const ConfirmationContainer = styled.div`
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+`
+
+export const ConfirmationText = styled.p`
+  color: #333333;
+  font-size: 1rem;
+  font-family: 'Cardo', serif;
+  font-weight: 400;
+  line-height: 1.6;
+`
+
+export const ConfirmationHeader = styled.h3`
+  color: ${accentColor};
+  font-size: 3.2rem;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 20px;
 `
