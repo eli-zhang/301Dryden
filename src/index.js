@@ -7,6 +7,7 @@ import HomePage from './pages/HomePage/HomePage';
 import RoomPage from './pages/RoomPage/RoomPage';
 import AboutPage from './pages/AboutPage/AboutPage';
 import RoomListPage from './pages/RoomListPage/RoomListPage';
+import ContactPage from './pages/ContactPage/ContactPage';
 import ScrollToTop from './utils/ScrollToTop';
 
 const root = ReactDOM.createRoot(
@@ -25,6 +26,9 @@ root.render(
       </Route>
       <Route path="/about" >
         <Route index={true} element={<AboutPage />} />
+      </Route>
+      <Route path="/contact" >
+        <Route index={true} element={<ContactPage />} />
       </Route>
       <Route path="*" element={<HomePage />} />
     </Routes>

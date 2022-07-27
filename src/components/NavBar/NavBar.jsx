@@ -20,8 +20,8 @@ const NavBar = ({ tab }) => {
                 <NavItem active={tab === "Contact"}>Contact</NavItem>
             </Link> */}
         </NavItemsContainer>
-        <Link to="/about" style={{ textDecoration: 'none' }}><FilledButton>Contact Us</FilledButton></Link>
-    </NavBarContainer>       
+        <Link to="/contact" style={{ textDecoration: 'none' }}><FilledButton>Contact Us</FilledButton></Link>
+    </NavBarContainer>
 }
 
 export default NavBar;
