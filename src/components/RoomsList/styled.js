@@ -7,13 +7,13 @@ const COLS_IN_GRID = 4;
 
 function getImageByKey(key) {
     switch (key) {
-        case 0: 
+        case 0:
             return require(`../../images/livingroom/livingroom-1.jpg`);
         case 1:
             return require(`../../images/kitchen/kitchen-1.jpg`);
         case 2:
             return require(`../../images/bathroom/bathroom-1.jpg`);
-        default: 
+        default:
             return require(`../../images/room${key}/room${key}-1.jpg`);
     }
 }
@@ -57,7 +57,7 @@ export const RoomImage = styled.div`
 
 export const RoomTitle = styled.p`
     color: black;
-    margin-top: 15px;
+    margin-top: 13px;
     font-weight: 600;
     font-size: 14px;
     font-family: 'Ubuntu', sans-serif;
@@ -69,8 +69,8 @@ export const RoomGridContainer = styled.div`
 `
 
 export const SectionTitle = styled.h1`
-    margin-top: 30px;
-    margin-bottom: 0px;
+    margin-top: 35px;
+    margin-bottom: 20px;
     color: ${accentColor};
     font-family: 'Oswald', sans-serif;
     font-size: 2.4rem;

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Form, Col } from 'react-bootstrap';
 import { ContactTitle, FormContainer, SubmitButton, ConfirmationContainer, ConfirmationHeader, ConfirmationText, ContactBackgroundRect, ContactContainer } from './styled';
 import emailjs from 'emailjs-com';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const initialFormData = Object.freeze({
   name: "",

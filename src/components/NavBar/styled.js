@@ -39,12 +39,14 @@ export const NavItemsContainer = styled.ul`
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-left: 7px;
 `
 
 export const NavItem = styled.li`
     display: block;
     margin-left: 15px;
     margin-right: 15px;
+    margin-top: 15px;
 
     color: #444444;
     font-size: 1rem;
@@ -67,7 +69,7 @@ export const NavItem = styled.li`
     &:before {  
         content: "";
         position: absolute;
-        bottom: -5px;
+        bottom: -2px;
         left: 0;
         width: 100%;
         height: 2px;
@@ -85,7 +87,7 @@ export const FilledButton = styled.button`
     margin-right: 15px;
 
     border-style: none;
-    padding: 15px 20px;
+    padding: 12px 20px;
     font-size: 1rem;
     font-family: 'Ubuntu', sans-serif;
     font-weight: 300;

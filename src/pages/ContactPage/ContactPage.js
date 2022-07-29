@@ -1,6 +1,6 @@
 import ContactForm from '../../components/ContactForm/ContactForm';
 import NavBar from '../../components/NavBar/NavBar';
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import { ContactBackgroundRect, ContactContainer } from './styled'
 
 function ContactPage() {

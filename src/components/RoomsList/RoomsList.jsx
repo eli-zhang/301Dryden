@@ -15,20 +15,20 @@ const getRoomName = (roomNumber) => {
 const getInfoForRoomNumber = (roomNumber, index) => {
   let width = 1, height = 1, offset = 0;
   switch (roomNumber) {
-    case 0: 
-      width = 3; 
+    case 0:
+      width = 3;
       height = 1;
       break;
-    case 1: 
-      width = 2; 
+    case 1:
+      width = 2;
       height = 2;
       break;
     case 2:
-      width = 2; 
+      width = 2;
       height = 1;
       break;
     default:
-      width = 1; 
+      width = 1;
       height = 1;
   }
 
@@ -65,16 +65,16 @@ const RoomsList = () => {
           {roomNumbers.map((roomNumber, index) => {
             const { width, height, offset } = getInfoForRoomNumber(roomNumber, index);
             return (
-            <RoomItem index={index} offset={offset} key={index} width={width} height={height}
+              <RoomItem index={index} offset={offset} key={index} width={width} height={height}
                 onClick={() => handleClick(roomNumber)}>
-              <RoomImage number={roomNumber} />
-              <RoomTitle>{getRoomName(roomNumber)}</RoomTitle>
-            </RoomItem>)
+                <RoomImage number={roomNumber} />
+                <RoomTitle>{getRoomName(roomNumber)}</RoomTitle>
+              </RoomItem>)
           })}
         </RoomGrid>
       </RoomGridContainer>
     </>
-    
+
   )
 
 }

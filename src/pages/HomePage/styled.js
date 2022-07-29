@@ -9,7 +9,7 @@ export const EmptyButton = styled.button`
     color: ${accentColor};
 
     border: 1px solid ${accentColor};
-    padding: 15px 20px;
+    padding: 12px 20px;
     font-size: 1rem;
     font-family: 'Ubuntu', sans-serif;
     font-weight: 400;
@@ -126,7 +126,7 @@ export const AboutTitle = styled.h1`
     font-family: 'Oswald', sans-serif;
     font-weight: 400;
     text-transform: uppercase;
-    margin: 0;
+    margin-bottom: 20px;
 `
 
 export const AboutDescription = styled.p`
