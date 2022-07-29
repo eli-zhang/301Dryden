@@ -20,23 +20,35 @@ export const ContactBackgroundRect = styled.div`
 
 export const ContactTitle = styled.h1`
   color: ${accentColor};
-  font-size: 4.2rem;
+  font-size: 2.5rem;
   font-family: 'Oswald', sans-serif;
   font-weight: 400;
   text-transform: uppercase;
-  text-align: center;
-  float: left;
-  width: 50%;
-  margin: 320px 10px 10px 10px;
+  margin-bottom: 20px;
+  // text-align: center;
+  // float: left;
+  // width: 50%;
+  // margin: 320px 10px 10px 10px;
+`
+
+export const ContactMessage = styled.p`
+  color: #333333;
+  font-size: 1rem;
+  font-family: 'Cardo', serif;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 25px;
 `
 
 export const FormContainer = styled.div`
-  position: absolute;
-  top: 35%;
-  right: 15%;
-  margin: auto;
+  // position: absolute;
+  // top: 35%;
+  // right: 15%;
+  // float: right;
+  // margin: auto;
   width: 40%;
-  align-content: center;
+  // align-content: center;
+  flex: 3 1 auto;
 `
 
 export const SubmitButton = styled.button`
