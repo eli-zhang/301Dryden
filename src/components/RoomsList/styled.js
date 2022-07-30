@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { accentColor } from '../../constants';
 
 const ROWS_IN_GRID = 6;
-const COLS_IN_GRID = 4;
+export const COLS_IN_GRID = 4;
 
 function getImageByKey(key) {
     switch (key) {
