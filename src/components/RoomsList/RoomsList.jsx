@@ -4,8 +4,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { calculateTileOffsets } from '../../utils/utils'
 
 const roomNumbers = [101, 102, 103, 104, 105, 0, 1, 106, 201, 202, 203, 204, 205, 301, 302, 303, 2, 304]
-const specialRooms = { 0: [3, 1], 1: [2, 2], 2: [2, 1]};
-const tileOffsets = calculateTileOffsets(roomNumbers, specialRooms, COLS_IN_GRID);
+const specialRooms = { 0: [3, 1], 1: [2, 2], 2: [2, 1] };
+const { offsets, sizes } = calculateTileOffsets(roomNumbers, specialRooms, COLS_IN_GRID);
 
 const getRoomName = (roomNumber) => {
   switch (roomNumber) {
@@ -19,10 +19,9 @@ const getRoomName = (roomNumber) => {
 
 const getInfoForRoomNumber = (roomNumber, index) => {
   if (specialRooms[roomNumber]) {
-    console.log({ width: specialRooms[roomNumber][0], height: specialRooms[roomNumber][1], offset: tileOffsets[index]});
-    return { width: specialRooms[roomNumber][0], height: specialRooms[roomNumber][1], offset: tileOffsets[index]};
+    return { width: sizes[roomNumber][0], height: sizes[roomNumber][1], offset: offsets[index]};
   }
-  return { width: 1, height: 1, offset: tileOffsets[index] };
+  return { width: 1, height: 1, offset: offsets[index] };
 }
 
 const RoomsList = () => {
