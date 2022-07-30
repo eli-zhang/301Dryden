@@ -1,11 +1,11 @@
 import React from 'react';
 import { COLS_IN_GRID, RoomGridContainer, RoomGrid, RoomItem, RoomImage, RoomTitle, SectionTitle, SectionDescription } from './styled'
 import { Link, useNavigate } from "react-router-dom";
-import { calculateTileOffsets } from '../../utils/utils'
+import { calculateTileInfo } from '../../utils/utils'
 
 const roomNumbers = [101, 102, 103, 104, 105, 0, 1, 106, 201, 202, 203, 204, 205, 301, 302, 303, 2, 304]
-const specialRooms = { 0: [3, 1], 1: [2, 2], 2: [2, 1] };
-const { offsets, sizes } = calculateTileOffsets(roomNumbers, specialRooms, COLS_IN_GRID);
+const specialRooms = { 0: [3, 1], 1: [2, 2], 2: [2, 1], 202: [2, 2] };
+const { offsets, sizes } = calculateTileInfo(roomNumbers, specialRooms, COLS_IN_GRID);
 
 const getRoomName = (roomNumber) => {
   switch (roomNumber) {

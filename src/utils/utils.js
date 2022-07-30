@@ -1,10 +1,9 @@
 
-
 // roomList is a list of all the room numbers
 // specialRooms is a map of all special rooms to their sizes
 // specialRooms entry format: { 101: [3, 1] }
 // columns is the number of columns in the grids
-export const calculateTileOffsets = (roomsList, specialRooms, columns) => {
+export const calculateTileInfo = (roomsList, specialRooms, columns) => {
     let offsets = roomsList.map(() => { return 0 });    // A list that contains the offset for each tile
     let sizes = {}
     let rowOffsets = [] // An array of row start, col start and offset amount
@@ -24,14 +23,18 @@ export const calculateTileOffsets = (roomsList, specialRooms, columns) => {
             }
 
             if (rows > 1) {
-                rowOffsets.push({"startRow": currRow, "startCol": currCol, rows, cols})
+                rowOffsets.unshift({"startRow": currRow, "startCol": currCol, rows, cols})
             }
 
             sizes[currRoom] = [cols, rows];
         }
 
         for (let j = rowOffsets.length - 1; j >= 0; j--) {
+            currCol = (offsets[i] + i) % columns;
+            currRow = Math.floor((offsets[i] + i) / columns);
+
             const currEntry = rowOffsets[j];
+
             if (currEntry["startRow"] < currRow   // Previous tile is above current tile
                 && currEntry["startCol"] === currCol) {   // Previous tile starts on or before current column
                 for (let k = i; k < roomsList.length; k++) {
@@ -41,7 +44,7 @@ export const calculateTileOffsets = (roomsList, specialRooms, columns) => {
             }
 
             if (currEntry["startRow"] + currEntry["rows"] <= currRow + 1) {     // After the last row
-                    console.log("removing row offsets", JSON.stringify(rowOffsets))
+                    console.log("removing row offsets")
                 rowOffsets.splice(j, 1);
             }
         }
