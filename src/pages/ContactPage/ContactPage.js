@@ -3,8 +3,20 @@ import NavBar from '../../components/NavBar/NavBar';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import { ContactBackgroundRect, ContactContainer, ContactInfoContainer, ContactInfoHeader, ContactInfoMessage, GridWrapper } from './styled'
 import { ContactTitle, ContactMessage } from '../../components/ContactForm/styled'
+import { useLocation } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
-function ContactPage() {
+
+function ContactPage(props) {
+  const { state } = useLocation();
+  const [roomId, setRoomId] = useState(null);
+
+  useEffect(() => {
+    if (state) {
+      setRoomId(state.id);
+    }
+  }, [state])
+
   return (
     <>
       <NavBar tab={"Contact"} />
@@ -22,7 +34,7 @@ function ContactPage() {
             <ContactInfoMessage>(607) 351-1115</ContactInfoMessage>
           </GridWrapper>
         </ContactInfoContainer>
-        <ContactForm />
+        <ContactForm roomId={roomId}/>
       </ContactContainer>
     </>
   )
