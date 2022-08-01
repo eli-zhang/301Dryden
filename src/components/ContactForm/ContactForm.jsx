@@ -63,8 +63,8 @@ const ContactForm = () => {
     (!submitted) ? (
       <FormContainer>
         {/* <ContactBackgroundRect /> */}
-        <ContactTitle> Get in Touch with Us</ContactTitle>
-        <ContactMessage> Feel free to message us with any questions and inquiries you might have. We'll do our best to get back to you as soon as we can!</ContactMessage>
+        <ContactTitle> Get in Touch</ContactTitle>
+        <ContactMessage> Feel free to send us any questions and inquiries you have. We'll get back to you as soon as we can!</ContactMessage>
         {/* <FormContainer> */}
         <Form noValidate validated={validated} onSubmit={handleSubmit}>
           <Form.Group className="mb-3" as={Col} controlId="formGridName">

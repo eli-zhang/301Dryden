@@ -16,11 +16,11 @@ const NavBar = ({ tab }) => {
             <Link to="/about" style={{ textDecoration: 'none' }}>
                 <NavItem active={tab === "About"}>About</NavItem>
             </Link>
-            {/* <Link to="/contact" style={{ textDecoration: 'none' }}>
+            <Link to="/contact" style={{ textDecoration: 'none' }}>
                 <NavItem active={tab === "Contact"}>Contact</NavItem>
-            </Link> */}
+            </Link>
         </NavItemsContainer>
-        <Link to="/contact" style={{ textDecoration: 'none' }}><FilledButton>Contact Us</FilledButton></Link>
+        <Link to="/contact" style={{ textDecoration: 'none' }}><FilledButton>Reach out</FilledButton></Link>
     </NavBarContainer>
 }
 

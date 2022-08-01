@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
 export const ContactContainer = styled.div`
-    margin: 50px;
+    margin: 80px 150px;
     display: flex;
     justify-content: center;
 
-    // position: relative;
-    // height: 600px;
+    /* // position: relative; */
+    /* // height: 600px; */
 `
 export const ContactBackgroundRect = styled.div`
     position: absolute;
@@ -21,7 +21,7 @@ export const ContactBackgroundRect = styled.div`
 
 export const ContactInfoContainer = styled.div`
   flex: 1 1 auto;
-  // display: flex;
+  /* // display: flex; */
 `
 
 export const ContactInfoHeader = styled.div`
