@@ -6,7 +6,7 @@
 export const calculateTileInfo = (roomsList, specialRooms, columns) => {
     let offsets = roomsList.map(() => { return 0 });    // A list that contains the offset for each tile
     let sizes = {}
-    let rowOffsets = [] // An array of row start, col start and offset amount
+    let rowOffsets = {} // An array of row start, col start and offset amount
     for (let i = 0; i < roomsList.length; i++) {
         const currRoom = roomsList[i];
 
@@ -23,31 +23,45 @@ export const calculateTileInfo = (roomsList, specialRooms, columns) => {
             }
 
             if (rows > 1) {
-                rowOffsets.unshift({"startRow": currRow, "startCol": currCol, rows, cols})
+                rowOffsets[i] = {"startRow": currRow, "startCol": currCol, rows, cols}
             }
 
             sizes[currRoom] = [cols, rows];
         }
 
-        for (let j = rowOffsets.length - 1; j >= 0; j--) {
-            currCol = (offsets[i] + i) % columns;
-            currRow = Math.floor((offsets[i] + i) / columns);
+        const indicesOfSpecialTiles = Object.keys(rowOffsets); 
 
-            const currEntry = rowOffsets[j];
-
-            if (currEntry["startRow"] < currRow   // Previous tile is above current tile
-                && currEntry["startCol"] === currCol) {   // Previous tile starts on or before current column
-                for (let k = i; k < roomsList.length; k++) {
-                    console.log(i, `shifting by ${currEntry["cols"] }`)
-                    offsets[k] += currEntry["cols"];  
+        const updateRowOffsets = (indicesOfTilesToCheck) => {
+            for (let j = 0; j < indicesOfTilesToCheck.length; j++) {
+                currCol = (offsets[i] + i) % columns;
+                currRow = Math.floor((offsets[i] + i) / columns);
+    
+                let currIndex = indicesOfTilesToCheck[j];
+                let currEntry = rowOffsets[currIndex];
+    
+                if (currEntry["startRow"] < currRow   // Previous tile is above current tile
+                    && currEntry["startCol"] === currCol
+                    && currEntry["startRow"] + currEntry["rows"] - 1 >= currRow) {   // Previous tile starts on current column
+                    for (let k = i; k < roomsList.length; k++) {
+                        offsets[k] += currEntry["cols"];  
+    
+                        if (rowOffsets[k]) {    
+                            rowOffsets[k]["startCol"] = (offsets[k] + k) % columns;
+                            rowOffsets[k]["startRow"] = Math.floor((offsets[k] + k) / columns);    
+                            updatedSpecialTiles.push(k);
+                        }
+                    }
+                }
+    
+                if (currEntry["startRow"] + currEntry["rows"] - 1 < currRow) {     // After the last row
+                    delete rowOffsets[currIndex]
                 }
             }
-
-            if (currEntry["startRow"] + currEntry["rows"] <= currRow + 1) {     // After the last row
-                    console.log("removing row offsets")
-                rowOffsets.splice(j, 1);
-            }
         }
+
+        let updatedSpecialTiles = []
+        updateRowOffsets(indicesOfSpecialTiles);
+        // updateRowOffsets(updatedSpecialTiles);
     }
     
     return { offsets, sizes };
