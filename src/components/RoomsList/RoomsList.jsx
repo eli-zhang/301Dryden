@@ -1,8 +1,14 @@
 import React from 'react';
-import { RoomGridContainer, RoomGrid, RoomItem, RoomImage, RoomTitle, SectionTitle, SectionDescription } from './styled'
+import { COLS_IN_GRID, RoomGridContainer, RoomGrid, RoomItem, RoomImage, RoomTitle, SectionTitle, SectionDescription } from './styled'
 import { Link, useNavigate } from "react-router-dom";
+import { calculateTileInfo } from '../../utils/utils'
 
-const roomNumbers = [101, 102, 103, 104, 105, 0, 1, 106, 201, 202, 203, 204, 205, 301, 302, 303, 2, 304]
+// const roomNumbers = [101, 102, 103, 104, 105, 0, 1, 106, 201, 202, 203, 204, 205, 301, 302, 303, 2, 304]
+const roomNumbers = [101, 102, 103, 104, 105, 106, 201, 202, 203, 204, 205, 301, 302, 303, 304]
+
+const specialRooms = { 0: [3, 1], 1: [2, 2], 2: [2, 1], 106: [2, 2], 301: [2, 2], 302: [2, 2] };
+const { offsets, sizes } = calculateTileInfo(roomNumbers, specialRooms, COLS_IN_GRID);
+
 const getRoomName = (roomNumber) => {
   switch (roomNumber) {
     case 0: return "Living Room"
@@ -12,38 +18,12 @@ const getRoomName = (roomNumber) => {
   return `Room ${roomNumber}`;
 }
 
+
 const getInfoForRoomNumber = (roomNumber, index) => {
-  let width = 1, height = 1, offset = 0;
-  switch (roomNumber) {
-    case 0:
-      width = 3;
-      height = 1;
-      break;
-    case 1:
-      width = 2;
-      height = 2;
-      break;
-    case 2:
-      width = 2;
-      height = 1;
-      break;
-    default:
-      width = 1;
-      height = 1;
+  if (specialRooms[roomNumber]) {
+    return { width: sizes[roomNumber][0], height: sizes[roomNumber][1], offset: offsets[index]};
   }
-
-  // These values arrange the grid with the proper offset.
-  if (index === 6) {
-    offset = 2;
-  } else if (index === 7 || index === 8) {
-    offset = 3;
-  } else if (index >= 9 && index <= 16) {
-    offset = 5;
-  } else if (index > 16) {
-    offset = 6;
-  }
-
-  return { width, height, offset };
+  return { width: 1, height: 1, offset: offsets[index] };
 }
 
 const RoomsList = () => {
@@ -61,7 +41,7 @@ const RoomsList = () => {
         <i>All bedrooms are fully furnished with a bed, desk, chair, lamp, and dresser.</i>
       </SectionDescription>
       <RoomGridContainer>
-        <RoomGrid>
+        <RoomGrid count={roomNumbers.length}>
           {roomNumbers.map((roomNumber, index) => {
             const { width, height, offset } = getInfoForRoomNumber(roomNumber, index);
             return (

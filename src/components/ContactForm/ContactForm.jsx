@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Form, Col } from 'react-bootstrap';
 import { ContactTitle, FormContainer, SubmitButton, ConfirmationContainer, ConfirmationHeader, ConfirmationText, ContactMessage, ContactBackgroundRect, ContactContainer } from './styled';
 import emailjs from 'emailjs-com';
@@ -11,11 +11,12 @@ const initialFormData = Object.freeze({
   message: ""
 });
 
-const ContactForm = () => {
+const ContactForm = ({ roomId }) => {
   const [validated, setValidated] = useState(false);
   const [formData, updateFormData] = useState(initialFormData);
   const [submitted, setSubmitted] = useState(false);
   const [readySend, setReadySend] = useState(false);
+  const [autoMessage, setAutoMessage] = useState("");
 
   const handleChange = (event) => {
     updateFormData({
@@ -23,6 +24,12 @@ const ContactForm = () => {
       [event.target.name]: event.target.value.trim()
     });
   };
+
+  useEffect(() => {
+    if (roomId) {
+      setAutoMessage(`Hello! I was looking at some rooms on your website and am particularly interested in room ${roomId}. Is it still available?`)
+    }
+  }, [roomId])
 
   const sendEmail = async () => {
     const serviceID = "service_hrdk5ax";
@@ -48,7 +55,6 @@ const ContactForm = () => {
 
   }
   const handleSubmit = (event) => {
-    event.preventDefault();
 
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
@@ -56,6 +62,7 @@ const ContactForm = () => {
       event.stopPropagation();
     }
     else {
+      event.preventDefault();
       setReadySend(true)
     }
 
@@ -98,7 +105,7 @@ const ContactForm = () => {
             </Form.Group>
             <Form.Group className="mb-3" as={Col} id="formGridQuery">
               {/* <Form.Label>Query*</Form.Label> */}
-              <Form.Control required onChange={handleChange} name="message" as="textarea" placeholder="Message" rows={5} />
+              <Form.Control required onChange={handleChange} name="message" as="textarea" placeholder={autoMessage || "Message"} rows={5} />
               <Form.Control.Feedback type="invalid">
                 A message is required.
               </Form.Control.Feedback>

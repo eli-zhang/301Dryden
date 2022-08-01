@@ -2,13 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import { Routes, Route, HashRouter } from 'react-router-dom';
+import { Routes, Route, HashRouter,
+  // BrowserRouter - Replace HashRouter
+} from 'react-router-dom';
 import HomePage from './pages/HomePage/HomePage';
 import RoomPage from './pages/RoomPage/RoomPage';
 import AboutPage from './pages/AboutPage/AboutPage';
 import RoomListPage from './pages/RoomListPage/RoomListPage';
 import ContactPage from './pages/ContactPage/ContactPage';
-import ScrollToTop from './utils/ScrollToTop';
+import ScrollToTop from './utils/ScrollToTop/ScrollToTop';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root')

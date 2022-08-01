@@ -24,7 +24,7 @@ export const ContactTitle = styled.h1`
   font-family: 'Oswald', sans-serif;
   font-weight: 400;
   text-transform: uppercase;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   // text-align: center;
   // float: left;
   // width: 50%;
@@ -36,7 +36,7 @@ export const ContactMessage = styled.p`
   font-size: 1rem;
   font-family: 'Cardo', serif;
   font-weight: 500;
-  line-height: 1.2;
+  line-height: 1.6;
   margin-bottom: 25px;
 `
 
@@ -56,20 +56,19 @@ export const SubmitButton = styled.button`
   color: ${accentColor};
 
   border: 1px solid ${accentColor};
-  padding: 5px 10px;
+  padding: 10px 30px;
   font-size: 1rem;
   font-family: 'Ubuntu', sans-serif;
   font-weight: 400;
   text-transform: uppercase;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.05);
-
   transition: background-color 0.5s ease;
 
   &:hover {
       cursor: pointer;
       background-color: white;
   }
-  margin: auto;
+  margin-top: 5px;
 `
 
 export const ConfirmationContainer = styled.div`

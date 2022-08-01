@@ -80,6 +80,7 @@ export const AboutDescription = styled.p`
   font-family: 'Cardo', serif;
   font-weight: 400;
   line-height: 1.6;
+  margin-top: 20px;
 `
 
 export const InterestButtonContainer = styled.div`
