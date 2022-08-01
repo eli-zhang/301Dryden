@@ -42,7 +42,7 @@ const RoomView = ({ id }) => {
                     
                 </AboutDescription >
                 <InterestButtonContainer>
-                    <Link to="/about" style={{ textDecoration: 'none' }}>
+                    <Link to="/contact" style={{ textDecoration: 'none' }}>
                         <EmptyButton>
                             Request this room
                         </EmptyButton>
