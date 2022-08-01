@@ -4,6 +4,7 @@ import { accentColor } from '../../constants';
 
 const ROWS_IN_GRID = 6;
 export const COLS_IN_GRID = 4;
+const HEIGHT_PER_ROW = 350;
 
 function getImageByKey(key) {
     switch (key) {
@@ -24,7 +25,7 @@ export const RoomGrid = styled.div`
     column-gap: 20px;
     row-gap: 20px;
     grid-template-rows: auto;
-    height: 1800px;
+    height: ${props => HEIGHT_PER_ROW * Math.floor(props.count / COLS_IN_GRID)}px;
     place-items: stretch;
     background: none;
 `
@@ -43,6 +44,8 @@ export const RoomItem = styled.div`
         cursor: pointer;
         transform: scale(1.02);
     }
+
+    /* border-radius: 5px; */
 `
 
 export const RoomImage = styled.div`
