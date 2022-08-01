@@ -6,7 +6,7 @@ import { calculateTileInfo } from '../../utils/utils'
 // const roomNumbers = [101, 102, 103, 104, 105, 0, 1, 106, 201, 202, 203, 204, 205, 301, 302, 303, 2, 304]
 const roomNumbers = [101, 102, 103, 104, 105, 106, 201, 202, 203, 204, 205, 301, 302, 303, 304]
 
-const specialRooms = { 0: [3, 1], 1: [2, 2], 2: [2, 1] };
+const specialRooms = { 0: [3, 1], 1: [2, 2], 2: [2, 1], 106: [2, 2], 301: [2, 2], 302: [2, 2] };
 const { offsets, sizes } = calculateTileInfo(roomNumbers, specialRooms, COLS_IN_GRID);
 
 const getRoomName = (roomNumber) => {
