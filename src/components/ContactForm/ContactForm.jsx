@@ -32,13 +32,15 @@ const ContactForm = ({ roomId }) => {
   }, [roomId])
 
   const sendEmail = async () => {
-    const serviceID = "service_hrdk5ax";
-    const templateID = "template_dqxnor1";
-    const publicKey = "7CeNtuGEyEflxRHOK";
+    const serviceID = "service_qbx8nhm";
+    const templateID = "template_fi374y6";
+    const publicKey = "2DPXSXDLDxNEax738";
 
     const templateParams = {
       from_name: formData.name,
       from_email: formData.email,
+      from_phone: formData.mobile,
+      reply_to: formData.email,
       message: formData.message
     };
 
