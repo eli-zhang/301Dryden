@@ -1,6 +1,7 @@
 
 import { 
   BackgroundHeaderContainer, ExploreRoomsButtonContainer, HeaderBackgroundRect, LargeHomeImage,
+  UtilitiesInfoContainer, UtilitiesTaglineHeader, UtilitiesTagline, UtilitiesTaglineHighlight, SideLine,
   TaglineContainer, TaglineText,
   SectionSpacer } from './styled';
 
@@ -27,9 +28,21 @@ function HomePage() {
         </ExploreRoomsButtonContainer>
       </BackgroundHeaderContainer>
 
-      {/* <SectionSpacer/> */}
+      <SectionSpacer/>
 
-      {/* <AboutSection/> */}
+      <UtilitiesInfoContainer>
+        <SideLine/>
+        <UtilitiesTaglineHeader>
+          Free utilities.
+        </UtilitiesTaglineHeader>
+        <UtilitiesTagline>
+          <i>We pay for heat, electricity, water, sewage, gas, internet, cable TV, and trash.</i>
+        </UtilitiesTagline>
+      </UtilitiesInfoContainer>
+
+      <SectionSpacer/>
+
+      <AboutSection/>
 
       <SectionSpacer/>
 

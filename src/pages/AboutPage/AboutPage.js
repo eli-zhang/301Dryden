@@ -1,6 +1,5 @@
 import NavBar from '../../components/NavBar/NavBar'
 import { useState, useCallback } from 'react'
-import { BackgroundContainer, HeaderText, BlackHeaderText } from './styled'
 import AboutSection from '../../components/AboutSection/AboutSection'
 
 function AboutPage() {

@@ -31,6 +31,13 @@ const ContactForm = ({ roomId }) => {
     }
   }, [roomId])
 
+  useEffect(() => {
+    if (readySend) {
+      sendEmail();
+      setSubmitted(true);
+    }
+  }, [readySend])
+
   const sendEmail = async () => {
     const serviceID = "service_qbx8nhm";
     const templateID = "template_fi374y6";
@@ -57,9 +64,8 @@ const ContactForm = ({ roomId }) => {
 
   }
   const handleSubmit = (event) => {
-
     const form = event.currentTarget;
-    if (form.checkValidity() === false) {
+    if (!form.checkValidity()) {
       event.preventDefault();
       event.stopPropagation();
     }
@@ -69,12 +75,6 @@ const ContactForm = ({ roomId }) => {
     }
 
     setValidated(true)
-
-    if (readySend) {
-      sendEmail();
-      setSubmitted(true);
-    }
-
   };
 
   return (
