@@ -4,7 +4,8 @@ import homeExterior from '../../images/home_exterior.jpg';
 import { accentColor } from '../../constants';
 
 export const AboutContainer = styled.div`
-    margin-top: 30px;
+    /* margin-top: 0px; */
+    /* margin-bottom: 60px; */
     position: relative;
     height: 600px;
 `

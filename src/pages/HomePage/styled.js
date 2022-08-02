@@ -76,6 +76,41 @@ export const TaglineText = styled.span`
     text-transform: uppercase;
 `
 
+export const UtilitiesInfoContainer = styled.div`
+    position: relative;
+    margin: 0 70px;
+    padding: 30px;
+`
+
+export const SideLine = styled.div`
+    position: absolute;
+    left: 0;
+    height: 70%;
+    width: 4px;
+    top: 15%;
+    background-color: ${accentColor};
+`
+
+
+export const UtilitiesTaglineHeader = styled.h1`
+    color: #555555;
+    font-size: 2rem;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    /* text-transform: uppercase; */
+`
+
+export const UtilitiesTagline = styled.span`
+    color: #333333;
+    font-size: 1rem;
+    font-family: 'Cardo', serif;
+    font-weight: 400;
+`
+
+export const UtilitiesTaglineHighlight = styled.b`
+    color: ${accentColor};
+`
+
 export const SectionSpacer = styled.div`
     width: 100%;
     height: 60px;
