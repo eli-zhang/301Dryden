@@ -46,7 +46,7 @@ function HomePage() {
 
       <SectionSpacer/>
 
-      <RoomsList/>
+      {/* <RoomsList/> */}
       
     </div>
 
