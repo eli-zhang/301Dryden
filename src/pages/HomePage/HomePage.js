@@ -28,9 +28,9 @@ function HomePage() {
         </ExploreRoomsButtonContainer>
       </BackgroundHeaderContainer>
 
-      <SectionSpacer/>
+      {/* <SectionSpacer/> */}
 
-      <UtilitiesInfoContainer>
+      {/* <UtilitiesInfoContainer>
         <SideLine/>
         <UtilitiesTaglineHeader>
           Free utilities.
@@ -38,15 +38,15 @@ function HomePage() {
         <UtilitiesTagline>
           <i>We pay for heat, electricity, water, sewage, gas, internet, cable TV, and trash.</i>
         </UtilitiesTagline>
-      </UtilitiesInfoContainer>
+      </UtilitiesInfoContainer> */}
+{/* 
+      <SectionSpacer/>
+
+      <AboutSection/> */}
 
       <SectionSpacer/>
 
-      <AboutSection/>
-
-      <SectionSpacer/>
-
-      {/* <RoomsList/> */}
+      <RoomsList/>
       
     </div>
 
