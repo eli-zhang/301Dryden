@@ -24,8 +24,7 @@ const getPriceForRoom = (number) => {
     return prices[number] || '?';
 }
 
-const RoomView = ({ id }) => {
-    const preview = require(`../../images/room${id}/room${id}-1.jpg`);
+const RoomView = ({ id, room }) => {
 
     return (
         <HeaderContainer>

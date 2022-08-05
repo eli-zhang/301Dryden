@@ -7,7 +7,9 @@ export const COLS_IN_GRID = 4;
 const HEIGHT_PER_ROW = 500;
 const ROW_SPACING = 20;
 
-function getImageByKey(key) {
+function getImageByKey(props) {
+    console.log(props)
+    let key = props.number
     switch (key) {
         case 0:
             return require(`../../images/livingroom/livingroom-1.jpg`);
@@ -52,7 +54,7 @@ export const RoomItem = styled.div`
 export const RoomImage = styled.div`
     width: 100%;
     height: calc(100% - 50px);
-    background-image: url(${props => getImageByKey(props.number)});
+    background-image: url(${props => props.url || getImageByKey(props)});
     background-repeat:no-repeat;
     background-size:cover;
     background-position: center bottom;

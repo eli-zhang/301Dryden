@@ -4,7 +4,6 @@ import {
   UtilitiesInfoContainer, UtilitiesTaglineHeader, UtilitiesTagline, UtilitiesTaglineHighlight, SideLine,
   TaglineContainer, TaglineText,
   SectionSpacer } from './styled';
-
 import { EmptyButton } from '../../components/styled'
 import { Link } from "react-router-dom";
 import RoomsList from '../../components/RoomsList/RoomsList'
