@@ -2,13 +2,11 @@ import styled from 'styled-components';
 
 import { accentColor } from '../../constants';
 
-const ROWS_IN_GRID = 6;
 export const COLS_IN_GRID = 4;
 const HEIGHT_PER_ROW = 500;
 const ROW_SPACING = 20;
 
 function getImageByKey(props) {
-    console.log(props)
     let key = props.number
     switch (key) {
         case 0:

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Form, Col } from 'react-bootstrap';
-import { ContactTitle, FormContainer, SubmitButton, ConfirmationContainer, ConfirmationHeader, ConfirmationText, ContactMessage, ContactBackgroundRect, ContactContainer } from './styled';
+import { ContactTitle, FormContainer, SubmitButton, ConfirmationHeader, ConfirmationText, ContactMessage } from './styled';
 import emailjs from 'emailjs-com';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -90,7 +90,7 @@ const ContactForm = ({ roomId }) => {
               {/* <Form.Label>Name*</Form.Label> */}
               <Form.Control required onChange={handleChange} name="name" type="text" placeholder="Name" />
               <Form.Control.Feedback type="invalid">
-                Name is a required field.
+                Please provide your name.
               </Form.Control.Feedback>
             </Form.Group>
 
@@ -103,11 +103,14 @@ const ContactForm = ({ roomId }) => {
             </Form.Group>
             <Form.Group className="mb-3" as={Col} controlId="formGridMobile">
               {/* <Form.Label>Mobile no.*</Form.Label> */}
-              <Form.Control onChange={handleChange} name="mobile" placeholder="Phone number" />
+              <Form.Control required onChange={handleChange} name="mobile" placeholder="Phone number" />
+              <Form.Control.Feedback type="invalid">
+                Please provide a valid phone number.
+              </Form.Control.Feedback>
             </Form.Group>
             <Form.Group className="mb-3" as={Col} id="formGridQuery">
               {/* <Form.Label>Query*</Form.Label> */}
-              <Form.Control required onChange={handleChange} name="message" as="textarea" placeholder={autoMessage || "Message"} rows={5} />
+              <Form.Control required onChange={handleChange} name="message" as="textarea" defaultValue={autoMessage} placeholder={"Message"} rows={5} />
               <Form.Control.Feedback type="invalid">
                 A message is required.
               </Form.Control.Feedback>

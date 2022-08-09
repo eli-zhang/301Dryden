@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PhotoCarousel from './PhotoCarousel';
 import { Title, ImagesBackgroundRect, RoomTextContainer, 
     PreviewImage, HeaderContainer, Description, Text, InterestButtonContainer, EmptyButton,
@@ -16,24 +16,15 @@ const floorNumberToAdjective = (number) => {
     }
 }
 
-const prices = { 101: 995, 102: 965, 103: 935, 104: 950, 105: 995, 106: 975,
-                201: 995, 202: 975, 203: 950, 204: 995, 205: 950, 
-                301: 895, 302: 895, 303: 855, 304: 910 }
-
-const getPriceForRoom = (number) => {
-    return prices[number] || '?';
-}
-
 const RoomView = ({ id, room }) => {
-
     return (
         <HeaderContainer>
             {/* <PreviewImage src={preview} /> */}
             <ImagesBackgroundRect/>
-            <PhotoCarousel roomId={id} />
+            <PhotoCarousel roomId={id} images={ room.images.map((image) => { return image.url }) } />
             <RoomTextContainer>
                 <AboutTitle>Room {id}</AboutTitle>
-                <AboutPrice>${getPriceForRoom(id)} / mo</AboutPrice>
+                <AboutPrice>${room.price || '?'} / mo</AboutPrice>
                 <AboutDescription>
                     This room is on the {floorNumberToAdjective(id)} floor of our student house. 
                     It comes furnished with a full-sized bed, desk, closet, lamp, and drawers. 

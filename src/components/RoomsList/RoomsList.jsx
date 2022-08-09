@@ -36,7 +36,7 @@ const RoomsList = () => {
   const [specialRooms, setSpecialRooms] = useState(defaultSpecialRooms);
 
   const handleClick = (room) => {
-    navigate(`/rooms/${room.number}`, { state: room });
+    navigate(`/rooms/${room.number}`, { state: { room }});
   }
 
   const getImageUrlForRoom = (room) => {

@@ -1,8 +1,8 @@
 import ContactForm from '../../components/ContactForm/ContactForm';
 import NavBar from '../../components/NavBar/NavBar';
 // import 'bootstrap/dist/css/bootstrap.min.css';
-import { ContactBackgroundRect, ContactContainer, ContactInfoContainer, ContactInfoHeader, ContactInfoMessage, GridWrapper } from './styled'
-import { ContactTitle, ContactMessage } from '../../components/ContactForm/styled'
+import { ContactContainer, ContactInfoContainer, ContactInfoHeader, ContactInfoMessage, GridWrapper } from './styled'
+import { ContactTitle } from '../../components/ContactForm/styled'
 import { useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 

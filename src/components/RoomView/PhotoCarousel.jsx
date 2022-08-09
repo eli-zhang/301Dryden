@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import { CarouselImage, PhotoContainer } from './styled';
 import Slider from "react-slick";
@@ -10,15 +10,13 @@ import "slick-carousel/slick/slick-theme.css";
 // document.getElementsByClassName("slick-next:before").style.color = "black";
 
 // let elements = document.getElementsByClassName("slick-arrow");
-// console.log(elements)
 // for (let item of elements) {
-//   console.log(item);
 //   item.style.color = "black"
 // }
 // const a = document.getElementsByClassName("slick-prev:before");
 // a[0].style.color = "black";
 
-const PhotoCarousel = ({ roomId }) => {
+const PhotoCarousel = ({ roomId, images }) => {
   const settings = {
     arrows: true,
     dots: true,
@@ -93,31 +91,19 @@ const PhotoCarousel = ({ roomId }) => {
   }
 
   return (
-
-    // <Carousel activeIndex={index} onSelect={handleSelect} controls style={{ width: '50%', display: 'inline-block' }}>
-    // {
     <PhotoContainer>
       <Slider {...settings}>
-        {content.map((_, i) => {
+        {content.map((item, index) => {
           return (
-            <div>
+            <div key={index}>
               <CarouselImage
-                src={content[i]}
+                src={images[index] || item}
               />
             </div>
-
-
-            // <Carousel.Item style={{ backgroundColor: 'black' }} key={`item${i}`}>
-            //   <CarouselImage
-            //     src={content[i]}
-            //   />
-            // </Carousel.Item>
           )
         })}
       </Slider>
     </PhotoContainer>
-    // }
-    // </Carousel>
   );
 }
 
