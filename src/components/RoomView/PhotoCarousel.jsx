@@ -1,20 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import Carousel from 'react-bootstrap/Carousel';
 import { CarouselImage, PhotoContainer } from './styled';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
-// import 'bootstrap/dist/css/bootstrap.css';
-
-// document.getElementsByClassName("slick-next:before").style.color = "black";
-
-// let elements = document.getElementsByClassName("slick-arrow");
-// for (let item of elements) {
-//   item.style.color = "black"
-// }
-// const a = document.getElementsByClassName("slick-prev:before");
-// a[0].style.color = "black";
 
 const PhotoCarousel = ({ roomId, images }) => {
   const settings = {
@@ -29,11 +17,11 @@ const PhotoCarousel = ({ roomId, images }) => {
     autoplay: true,
     autoplaySpeed: 2000,
   };
-  const [index, setIndex] = useState(0);
+  // const [index, setIndex] = useState(0);
 
-  const handleSelect = (selectedIndex, e) => {
-    setIndex(selectedIndex);
-  };
+  // const handleSelect = (selectedIndex, e) => {
+  //   setIndex(selectedIndex);
+  // };
   function importAll(r) {
     return r.keys().map(r);
   }
