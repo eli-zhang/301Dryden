@@ -28,6 +28,8 @@ const RoomView = ({ id, room }) => {
                 <AboutDescription>
                     This room is on the {floorNumberToAdjective(id)} floor of our student house. 
                     It comes furnished with a full-sized bed, desk, closet, lamp, and drawers. 
+                    {room.description && <><br/><br/>{room.description}</>}
+
                     <br/><br/>All utilities are included. Downstairs, there is a kitchen, lounge, and in-house laundry. 
                     
                 </AboutDescription >
